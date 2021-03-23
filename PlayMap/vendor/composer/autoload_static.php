@@ -431,14 +431,19 @@ class ComposerStaticInitc744670d0d5e049d6b9ccf9d22911621
     );
 
     public static $classMap = array (
+        'App\\Controller\\AccountController' => __DIR__ . '/../..' . '/src/Controller/AccountController.php',
+        'App\\Controller\\BackController' => __DIR__ . '/../..' . '/src/Controller/BackController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Entity\\Beta' => __DIR__ . '/../..' . '/src/Entity/Beta.php',
+        'App\\Entity\\Stat' => __DIR__ . '/../..' . '/src/Entity/Stat.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Form\\RegistrationType' => __DIR__ . '/../..' . '/src/Form/RegistrationType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\BetaRepository' => __DIR__ . '/../..' . '/src/Repository/BetaRepository.php',
+        'App\\Repository\\StatRepository' => __DIR__ . '/../..' . '/src/Repository/StatRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
+        'App\\Security\\UserAuthenticator' => __DIR__ . '/../..' . '/src/Security/UserAuthenticator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',

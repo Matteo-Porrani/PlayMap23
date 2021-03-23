@@ -125,6 +125,8 @@ class __TwigTemplate_bc3801cfffb83e9664e780413eca0b157c7f62c53344bd6ea6c8cec6924
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 20, $this->source); })()), "stat", [], "any", false, false, false, 20), "monthlyDistance", [], "any", false, false, false, 20), "html", null, true);
         echo " km</p>
 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsam totam saepe velit neque dolore incidunt, quidem maiores, tempora, corporis officiis dignissimos magnam quae nisi! Quia odio expedita consectetur quibusdam?</p>
+
         
       </div>
     </div>
@@ -178,6 +180,8 @@ class __TwigTemplate_bc3801cfffb83e9664e780413eca0b157c7f62c53344bd6ea6c8cec6924
         <p>Distance Totale : {{ user.stat.totalDistance }} km</p>
         <p>Distance Mensuelle : {{ user.stat.monthlyDistance }} km</p>
 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsam totam saepe velit neque dolore incidunt, quidem maiores, tempora, corporis officiis dignissimos magnam quae nisi! Quia odio expedita consectetur quibusdam?</p>
+
         
       </div>
     </div>
@@ -185,6 +189,6 @@ class __TwigTemplate_bc3801cfffb83e9664e780413eca0b157c7f62c53344bd6ea6c8cec6924
 
 
 {% endblock %}
-", "account/account.html.twig", "/Applications/MAMP/htdocs/playmap19/PlayMap/templates/account/account.html.twig");
+", "account/account.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/account/account.html.twig");
     }
 }
