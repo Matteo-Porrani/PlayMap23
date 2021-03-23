@@ -31,7 +31,6 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
             'stylesheets' => [$this, 'block_stylesheets'],
             'javascripts' => [$this, 'block_javascripts'],
             'body' => [$this, 'block_body'],
-            'content' => [$this, 'block_content'],
         ];
     }
 
@@ -62,19 +61,19 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t";
         // line 14
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 24
+        // line 26
         echo "
 \t\t";
-        // line 25
+        // line 27
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 28
+        // line 32
         echo "\t</head>
 
 \t<body>
 \t\t";
-        // line 31
+        // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 49
+        // line 38
         echo "\t</body>
 </html>
 ";
@@ -131,6 +130,11 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\">
+\t\t\t<link rel=\"stylesheet\" href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-home.css"), "html", null, true);
+        echo "\">
+
 \t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -140,7 +144,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 25
+    // line 27
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -150,10 +154,12 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 26
+        // line 28
         echo "\t\t\t";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
+
+      
 \t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -163,7 +169,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 31
+    // line 35
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -173,45 +179,9 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 32
-        echo "
-\t\t\t<header>
-\t\t\t\t<div class=\"container\">
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t<div class=\"col\">
-\t\t\t\t\t\t\t<h1>PlayMap</h1>
-
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</header>
-
-
-\t\t\t";
-        // line 46
-        echo "\t\t\t";
-        $this->displayBlock('content', $context, $blocks);
-        // line 47
-        echo "
+        // line 36
+        echo "\t\t\t
 \t\t";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 46
-    public function block_content($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
-
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -227,7 +197,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     public function getDebugInfo()
     {
-        return array (  206 => 46,  195 => 47,  192 => 46,  177 => 32,  167 => 31,  154 => 26,  144 => 25,  132 => 22,  121 => 15,  111 => 14,  100 => 7,  90 => 6,  78 => 49,  76 => 31,  71 => 28,  69 => 25,  66 => 24,  64 => 14,  61 => 13,  57 => 9,  55 => 6,  48 => 1,);
+        return array (  183 => 36,  173 => 35,  158 => 28,  148 => 27,  135 => 23,  131 => 22,  120 => 15,  110 => 14,  99 => 7,  89 => 6,  77 => 38,  75 => 35,  70 => 32,  68 => 27,  65 => 26,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -254,34 +224,23 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<link href=\"https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap\" rel=\"stylesheet\">
 
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
+\t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-home.css') }}\">
+
 \t\t{% endblock %}
 
 \t\t{% block javascripts %}
 \t\t\t{{ encore_entry_script_tags('app') }}
+
+      
 \t\t{% endblock %}
 \t</head>
 
 \t<body>
 \t\t{% block body %}
-
-\t\t\t<header>
-\t\t\t\t<div class=\"container\">
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t<div class=\"col\">
-\t\t\t\t\t\t\t<h1>PlayMap</h1>
-
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</header>
-
-
-\t\t\t{# content qui sera rempli dans les autres templates #}
-\t\t\t{% block content %}{% endblock %}
-
+\t\t\t
 \t\t{% endblock %}
 \t</body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/playmap19/PlayMap/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/base.html.twig");
     }
 }

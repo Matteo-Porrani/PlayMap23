@@ -90,24 +90,125 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
         // line 8
         echo "
-\t<div class=\"container\">
-\t\t<div class=\"row\">
-\t\t\t<div class=\"col\">
-\t\t\t\t<h2>Homepage</h2>
+\t<main>
 
-        ";
-        // line 16
-        echo "
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni beatae aut non, quae libero illum voluptate dolores veniam quidem? Itaque nobis delectus expedita tempora et saepe fuga voluptas sunt.</p>
-\t\t<img src=\"";
-        // line 18
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/error-.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t</div>
+\t\t<!--MAIN-->
+
+\t\t<div class=\"container\">
+
+\t\t\t<div class=\"row\">
+
+\t\t\t\t<!--CADRE MES CHALLENGES ****************************************************** -->
+\t\t\t\t<div class=\"col-4 text-center justify-content-center\">
+\t\t\t\t\t<div class=\"cadreChallenge \">
+\t\t\t\t\t\t<h3>Mes Challenges</h3>
+\t\t\t\t\t\t<div class=\"cadreChallenge2\">
+\t\t\t\t\t\t\t<p>Pas de Challenge en cours...</p><br>
+\t\t\t\t\t\t\t<a href=\"\" class=\"\">Inscrivez-vous pour participer aux challenges !</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!--CADRE MES CHALLENGES-->
+
+
+
+
+\t\t\t\t<!--MOYEN DE TRANSPORTS ****************************************************** -->
+\t\t\t\t<div class=\"col-4\">
+
+\t\t\t\t\t<div class=\"row justify-content-center\">
+\t\t\t\t\t\t<img class=\"ombretrottinette\" src=\"";
+        // line 37
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/ombretrottinette.png"), "html", null, true);
+        echo "\">
+\t\t\t\t\t  <p class=\"selection\">Sélectionnez votre moyen de transport :</p>
+\t\t\t\t  </div>
+
+\t\t\t\t  <div class=\"row justify-content-center\">
+
+            <div class=\"btnTransport\">
+              <button type=\"button\" class=\"btn text-light\">Vélo</button>
+            </div>
+            <div class=\"btnTransport\">
+              <button type=\"button\" class=\"btn text-light\">Trottinette</button>
+            </div>
+            <div class=\"btnTransport\">
+              <button type=\"button\" class=\"btn text-light\">A Pieds</button>
+            </div>
+
+            <!-- FIN MOYEN DE TRANSPORTS-->
+
+          </div>
+
+
+            <!--INPUT DEPART ARRIVEE-->
+          <div class=\"row justify-content-center\">
+
+            <form>
+              <div class=\"form-group\">
+                <label for=\"formGroupExampleInput\">Départ</label>
+                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput\" placeholder=\"Adresse de départ\">
+              </div>
+
+              <div class=\"form-group\">
+                <label for=\"formGroupExampleInput2\">Arrivée</label>
+                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput2\" placeholder=\"Adresse d'arrivée\">
+              </div>
+
+              <div class=\"row justify-content-center\">
+                <button type=\"button\" class=\"btn btn-warning text-light mb-4\">Allons-y !</button>
+              </div>
+
+            </form>
+
+          </div>
+
+        <!--FIN INPUT DEPART ARRIVEE-->
+          
+        <!--METEO-->
+        </div>
+
+
+      <!--METEO ****************************************************** -->
+        <div class=\"col-4\">
+          <div class=\"meteo\">
+
+            <div class=\"row\">
+
+              <div class=\"col-6 p-3 mb-2 text-white\">
+                <p>Paris 10°<br>Aujourd'hui 10°/8°</p>
+              </div>
+
+              <div class=\"col-6\">
+                <div>
+                  <img src=\"";
+        // line 98
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/MeteoVent.png"), "html", null, true);
+        echo "\">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          
+        </div>
+
+    </div> <!-- fin de row -->
+
+  </div> <!-- fin du container -->
+
+\t\t
+
+\t\t<!--MAP-->
+    <div class=\"container-fluid\">
+\t\t\t<div class=\"map\">
+        
+      </div>
 \t\t</div>
-\t</div>
 
-
+\t</main>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -129,7 +230,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
     public function getDebugInfo()
     {
-        return array (  104 => 18,  100 => 16,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  187 => 98,  123 => 37,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -142,21 +243,119 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 {% block content %}
 
-\t<div class=\"container\">
-\t\t<div class=\"row\">
-\t\t\t<div class=\"col\">
-\t\t\t\t<h2>Homepage</h2>
+\t<main>
 
-        {# <a href=\"{{ path('security_login') }}\">Connexion</a>
-        <a href=\"{{ path('security_logout') }}\">Déconnexion</a> #}
+\t\t<!--MAIN-->
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni beatae aut non, quae libero illum voluptate dolores veniam quidem? Itaque nobis delectus expedita tempora et saepe fuga voluptas sunt.</p>
-\t\t<img src=\"{{asset('images/error-.jpg') }}\" alt=\"\">
-\t\t\t</div>
+\t\t<div class=\"container\">
+
+\t\t\t<div class=\"row\">
+
+\t\t\t\t<!--CADRE MES CHALLENGES ****************************************************** -->
+\t\t\t\t<div class=\"col-4 text-center justify-content-center\">
+\t\t\t\t\t<div class=\"cadreChallenge \">
+\t\t\t\t\t\t<h3>Mes Challenges</h3>
+\t\t\t\t\t\t<div class=\"cadreChallenge2\">
+\t\t\t\t\t\t\t<p>Pas de Challenge en cours...</p><br>
+\t\t\t\t\t\t\t<a href=\"\" class=\"\">Inscrivez-vous pour participer aux challenges !</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!--CADRE MES CHALLENGES-->
+
+
+
+
+\t\t\t\t<!--MOYEN DE TRANSPORTS ****************************************************** -->
+\t\t\t\t<div class=\"col-4\">
+
+\t\t\t\t\t<div class=\"row justify-content-center\">
+\t\t\t\t\t\t<img class=\"ombretrottinette\" src=\"{{ asset('images/ombretrottinette.png') }}\">
+\t\t\t\t\t  <p class=\"selection\">Sélectionnez votre moyen de transport :</p>
+\t\t\t\t  </div>
+
+\t\t\t\t  <div class=\"row justify-content-center\">
+
+            <div class=\"btnTransport\">
+              <button type=\"button\" class=\"btn text-light\">Vélo</button>
+            </div>
+            <div class=\"btnTransport\">
+              <button type=\"button\" class=\"btn text-light\">Trottinette</button>
+            </div>
+            <div class=\"btnTransport\">
+              <button type=\"button\" class=\"btn text-light\">A Pieds</button>
+            </div>
+
+            <!-- FIN MOYEN DE TRANSPORTS-->
+
+          </div>
+
+
+            <!--INPUT DEPART ARRIVEE-->
+          <div class=\"row justify-content-center\">
+
+            <form>
+              <div class=\"form-group\">
+                <label for=\"formGroupExampleInput\">Départ</label>
+                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput\" placeholder=\"Adresse de départ\">
+              </div>
+
+              <div class=\"form-group\">
+                <label for=\"formGroupExampleInput2\">Arrivée</label>
+                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput2\" placeholder=\"Adresse d'arrivée\">
+              </div>
+
+              <div class=\"row justify-content-center\">
+                <button type=\"button\" class=\"btn btn-warning text-light mb-4\">Allons-y !</button>
+              </div>
+
+            </form>
+
+          </div>
+
+        <!--FIN INPUT DEPART ARRIVEE-->
+          
+        <!--METEO-->
+        </div>
+
+
+      <!--METEO ****************************************************** -->
+        <div class=\"col-4\">
+          <div class=\"meteo\">
+
+            <div class=\"row\">
+
+              <div class=\"col-6 p-3 mb-2 text-white\">
+                <p>Paris 10°<br>Aujourd'hui 10°/8°</p>
+              </div>
+
+              <div class=\"col-6\">
+                <div>
+                  <img src=\"{{ asset('images/MeteoVent.png') }}\">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          
+        </div>
+
+    </div> <!-- fin de row -->
+
+  </div> <!-- fin du container -->
+
+\t\t
+
+\t\t<!--MAP-->
+    <div class=\"container-fluid\">
+\t\t\t<div class=\"map\">
+        
+      </div>
 \t\t</div>
-\t</div>
 
-
+\t</main>
 {% endblock %}
 ", "home/home.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/home/home.html.twig");
     }

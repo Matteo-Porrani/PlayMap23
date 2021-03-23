@@ -6,19 +6,117 @@
 
 {% block content %}
 
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h2>Homepage</h2>
+	<main>
 
-        {# <a href="{{ path('security_login') }}">Connexion</a>
-        <a href="{{ path('security_logout') }}">Déconnexion</a> #}
+		<!--MAIN-->
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni beatae aut non, quae libero illum voluptate dolores veniam quidem? Itaque nobis delectus expedita tempora et saepe fuga voluptas sunt.</p>
-		<img src="{{asset('images/error-.jpg') }}" alt="">
-			</div>
+		<div class="container">
+
+			<div class="row">
+
+				<!--CADRE MES CHALLENGES ****************************************************** -->
+				<div class="col-4 text-center justify-content-center">
+					<div class="cadreChallenge ">
+						<h3>Mes Challenges</h3>
+						<div class="cadreChallenge2">
+							<p>Pas de Challenge en cours...</p><br>
+							<a href="" class="">Inscrivez-vous pour participer aux challenges !</a>
+						</div>
+					</div>
+				</div>
+
+				<!--CADRE MES CHALLENGES-->
+
+
+
+
+				<!--MOYEN DE TRANSPORTS ****************************************************** -->
+				<div class="col-4">
+
+					<div class="row justify-content-center">
+						<img class="ombretrottinette" src="{{ asset('images/ombretrottinette.png') }}">
+					  <p class="selection">Sélectionnez votre moyen de transport :</p>
+				  </div>
+
+				  <div class="row justify-content-center">
+
+            <div class="btnTransport">
+              <button type="button" class="btn text-light">Vélo</button>
+            </div>
+            <div class="btnTransport">
+              <button type="button" class="btn text-light">Trottinette</button>
+            </div>
+            <div class="btnTransport">
+              <button type="button" class="btn text-light">A Pieds</button>
+            </div>
+
+            <!-- FIN MOYEN DE TRANSPORTS-->
+
+          </div>
+
+
+            <!--INPUT DEPART ARRIVEE-->
+          <div class="row justify-content-center">
+
+            <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Départ</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Adresse de départ">
+              </div>
+
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Arrivée</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Adresse d'arrivée">
+              </div>
+
+              <div class="row justify-content-center">
+                <button type="button" class="btn btn-warning text-light mb-4">Allons-y !</button>
+              </div>
+
+            </form>
+
+          </div>
+
+        <!--FIN INPUT DEPART ARRIVEE-->
+          
+        <!--METEO-->
+        </div>
+
+
+      <!--METEO ****************************************************** -->
+        <div class="col-4">
+          <div class="meteo">
+
+            <div class="row">
+
+              <div class="col-6 p-3 mb-2 text-white">
+                <p>Paris 10°<br>Aujourd'hui 10°/8°</p>
+              </div>
+
+              <div class="col-6">
+                <div>
+                  <img src="{{ asset('images/MeteoVent.png') }}">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          
+        </div>
+
+    </div> <!-- fin de row -->
+
+  </div> <!-- fin du container -->
+
+		
+
+		<!--MAP-->
+    <div class="container-fluid">
+			<div class="map">
+        
+      </div>
 		</div>
-	</div>
 
-
+	</main>
 {% endblock %}

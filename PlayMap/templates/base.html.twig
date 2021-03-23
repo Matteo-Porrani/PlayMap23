@@ -20,31 +20,20 @@
 			<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap" rel="stylesheet">
 
 			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/style-home.css') }}">
+
 		{% endblock %}
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
+
+      
 		{% endblock %}
 	</head>
 
 	<body>
 		{% block body %}
-
-			<header>
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<h1>PlayMap</h1>
-
-						</div>
-					</div>
-				</div>
-			</header>
-
-
-			{# content qui sera rempli dans les autres templates #}
-			{% block content %}{% endblock %}
-
+			
 		{% endblock %}
 	</body>
 </html>

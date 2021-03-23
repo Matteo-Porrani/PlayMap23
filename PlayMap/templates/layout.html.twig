@@ -4,39 +4,129 @@
 
 	<header>
 
+		<!---BARRE DE NAV-->
 
-		<nav>
 
-			<h1 class="d-inline-block mx-3">
-				<a href="{{ path('home') }}">PlayMap</a>
-			</h1>
+		<div
+			class="container">
 
-			{# {% if is_granted('ROLE_USER') %} #}
-			{% if app.user %}
+			<!--COUPE + BTN CHALLENGE-->
 
-				<span class="mx-3">Bonjour
-					{{ app.user.pseudo }}</span>
-				<a href="{{ path('security_logout') }}">Se déconnecter</a>
+			<div class="row p-3 pb-5 justify-content-center text-center">
 
-			{% else %}
+				<div class="col-4 align-self-center">
+					<a href="#">
+						<img class="coupechallenges" src="{{ asset('images/iconcoupechallenge.png') }}">
+					</a>
+					<div class="btnChallenge">
+						<a class="btn btn-warning text-light d-sm-none d-lg-inline" href="#">Challenges</a>
+					</div>
+				</div>
 
-				<span class="mx-3">Bonjour Inconnu</span>
-				<a class="mx-3" href="{{ path('security_login') }}">Se connecter</a>
-				<a class="mx-3" href="{{ path('security_registration') }}">S'inscrire</a>
+				<!--COUPE + BTN CHALLENGE-->
 
-			{% endif %}
+				<!--LOGO PLAYMAP-->
 
-		</nav>
+				<div class="col-4">
+					<a href="{{ path('home') }}"><img class="logoplaymap" src="{{ asset('images/logoplaymap2.png') }}"></a>
+				</div>
+
+				<!--LOGO PLAYMAP-->
+
+				<!--NAV BURGER INSCRIPTION CONNEXION-->
+
+				<div class="col-4">
+					<nav class="navbar navbar-expand-lg navbar-dark ">
+						<button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon "></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+							<div class="navbar-nav">
+								<a class="nav-link active text-light btn-nav" href="{{ path('security_registration') }}">Inscription</a>
+								<a class="nav-link active text-light btn-nav" href="#">Connexion</a>
+							</div>
+						</div>
+					</nav>
+				</div>
+
+			</div>
+		</div>
+
+		<!--NAV BURGER INSCRIPTION CONNEXION-->
+
+		<!--BARRE DE NAV-->
+
 	</header>
 
-	<main>
-		{% block content %}
-			{# c'est ici que viendra s'insérer le contenu propre à chaque page #}
-		{% endblock %}
-	</main>
+
+	{% block content %}
+		{# c'est ici que viendra s'insérer le contenu propre à chaque page #}
+
+
+	{% endblock %}
+
 
 	<footer>
-		<p>&copy; PlayMap-{{ "now" | date("Y") }}</p>
-	</footer>
+
+		<!--FOOTER-->
+
+		<div class="container">
+
+			<div class="row p-3">
+
+				<div class="col-3 ">
+					<div class="Fcontact">
+						<p>Contact Siège</p>
+						<p>6 Rue Chaudron</p><br>
+						<p>75010 PARIS</p><br>
+						<p>xxx.gmail.com</p>
+						<p>Tel : 0123456789</p>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row justify-content-center mb-5 mt-3">
+						<div class="imgR">
+
+							<img src="{{ asset('images/InstagramIcon.png') }}">
+							<img src="{{ asset('images/FacebookIcon.png') }}">
+							<img src="{{ asset('images/TwitterIcon.png') }}">
+
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-4 text-center mt-4">
+							<p>Mentions légales</p>
+						</div>
+
+						<div class="col-4 text-center mt-4">
+							<p>Cookies</p>
+						</div>
+
+						<div class="col-4 text-center mt-4">
+							<p>Contactez-nous</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-3 align-self-center">
+					<div class="form-group">
+						<label for="formGroupExampleInput2">Suivez notre actualité</label>
+						<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Adresse mail">
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!--FOOTER-->
+
+</footer>
+
 
 {% endblock %}

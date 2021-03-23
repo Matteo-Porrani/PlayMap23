@@ -69,66 +69,149 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
         echo "
 \t<header>
 
+\t\t<!---BARRE DE NAV-->
 
-\t\t<nav>
 
-\t\t\t<h1 class=\"d-inline-block mx-3\">
-\t\t\t\t<a href=\"";
-        // line 11
+\t\t<div
+\t\t\tclass=\"container\">
+
+\t\t\t<!--COUPE + BTN CHALLENGE-->
+
+\t\t\t<div class=\"row p-3 pb-5 justify-content-center text-center\">
+
+\t\t\t\t<div class=\"col-4 align-self-center\">
+\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t<img class=\"coupechallenges\" src=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/iconcoupechallenge.png"), "html", null, true);
+        echo "\">
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"btnChallenge\">
+\t\t\t\t\t\t<a class=\"btn btn-warning text-light d-sm-none d-lg-inline\" href=\"#\">Challenges</a>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!--COUPE + BTN CHALLENGE-->
+
+\t\t\t\t<!--LOGO PLAYMAP-->
+
+\t\t\t\t<div class=\"col-4\">
+\t\t\t\t\t<a href=\"";
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">PlayMap</a>
-\t\t\t</h1>
+        echo "\"><img class=\"logoplaymap\" src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logoplaymap2.png"), "html", null, true);
+        echo "\"></a>
+\t\t\t\t</div>
 
-\t\t\t";
-        // line 15
-        echo "\t\t\t";
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15)) {
-            // line 16
-            echo "
-\t\t\t\t<span class=\"mx-3\">Bonjour
-\t\t\t\t\t";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18), "pseudo", [], "any", false, false, false, 18), "html", null, true);
-            echo "</span>
-\t\t\t\t<a href=\"";
-            // line 19
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_logout");
-            echo "\">Se déconnecter</a>
+\t\t\t\t<!--LOGO PLAYMAP-->
 
-\t\t\t";
-        } else {
-            // line 22
-            echo "
-\t\t\t\t<span class=\"mx-3\">Bonjour Inconnu</span>
-\t\t\t\t<a class=\"mx-3\" href=\"";
-            // line 24
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
-            echo "\">Se connecter</a>
-\t\t\t\t<a class=\"mx-3\" href=\"";
-            // line 25
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_registration");
-            echo "\">S'inscrire</a>
+\t\t\t\t<!--NAV BURGER INSCRIPTION CONNEXION-->
 
-\t\t\t";
-        }
-        // line 28
-        echo "
-\t\t</nav>
+\t\t\t\t<div class=\"col-4\">
+\t\t\t\t\t<nav class=\"navbar navbar-expand-lg navbar-dark \">
+\t\t\t\t\t\t<button class=\"navbar-toggler border-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t\t\t\t\t<span class=\"navbar-toggler-icon \"></span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
+\t\t\t\t\t\t\t<div class=\"navbar-nav\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link active text-light btn-nav\" href=\"";
+        // line 45
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_registration");
+        echo "\">Inscription</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link active text-light btn-nav\" href=\"#\">Connexion</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+
+\t\t\t</div>
+\t\t</div>
+
+\t\t<!--NAV BURGER INSCRIPTION CONNEXION-->
+
+\t\t<!--BARRE DE NAV-->
+
 \t</header>
 
-\t<main>
-\t\t";
-        // line 33
+
+\t";
+        // line 62
         $this->displayBlock('content', $context, $blocks);
-        // line 36
-        echo "\t</main>
+        // line 67
+        echo "
 
 \t<footer>
-\t\t<p>&copy; PlayMap-";
-        // line 39
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
-        echo "</p>
-\t</footer>
+
+\t\t<!--FOOTER-->
+
+\t\t<div class=\"container\">
+
+\t\t\t<div class=\"row p-3\">
+
+\t\t\t\t<div class=\"col-3 \">
+\t\t\t\t\t<div class=\"Fcontact\">
+\t\t\t\t\t\t<p>Contact Siège</p>
+\t\t\t\t\t\t<p>6 Rue Chaudron</p><br>
+\t\t\t\t\t\t<p>75010 PARIS</p><br>
+\t\t\t\t\t\t<p>xxx.gmail.com</p>
+\t\t\t\t\t\t<p>Tel : 0123456789</p>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<div class=\"col-6\">
+\t\t\t\t\t<div class=\"row justify-content-center mb-5 mt-3\">
+\t\t\t\t\t\t<div class=\"imgR\">
+
+\t\t\t\t\t\t\t<img src=\"";
+        // line 91
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/InstagramIcon.png"), "html", null, true);
+        echo "\">
+\t\t\t\t\t\t\t<img src=\"";
+        // line 92
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/FacebookIcon.png"), "html", null, true);
+        echo "\">
+\t\t\t\t\t\t\t<img src=\"";
+        // line 93
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/TwitterIcon.png"), "html", null, true);
+        echo "\">
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t\t<div class=\"row\">
+
+\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Mentions légales</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Cookies</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Contactez-nous</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<div class=\"col-3 align-self-center\">
+\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t<label for=\"formGroupExampleInput2\">Suivez notre actualité</label>
+\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput2\" placeholder=\"Adresse mail\">
+\t\t\t\t\t</div>
+\t\t\t\t</form>
+\t\t\t</div>
+
+\t\t</div>
+
+\t</div>
+
+\t<!--FOOTER-->
+
+</footer>
+
 
 ";
         
@@ -139,7 +222,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
     }
 
-    // line 33
+    // line 62
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -149,10 +232,12 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 34
-        echo "\t\t\t";
-        // line 35
+        // line 63
         echo "\t\t";
+        // line 64
+        echo "
+
+\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -173,7 +258,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
     public function getDebugInfo()
     {
-        return array (  155 => 35,  153 => 34,  143 => 33,  129 => 39,  124 => 36,  122 => 33,  115 => 28,  109 => 25,  105 => 24,  101 => 22,  95 => 19,  91 => 18,  87 => 16,  84 => 15,  78 => 11,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  238 => 64,  236 => 63,  226 => 62,  176 => 93,  172 => 92,  168 => 91,  142 => 67,  140 => 62,  120 => 45,  101 => 31,  86 => 19,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,42 +269,132 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
 \t<header>
 
+\t\t<!---BARRE DE NAV-->
 
-\t\t<nav>
 
-\t\t\t<h1 class=\"d-inline-block mx-3\">
-\t\t\t\t<a href=\"{{ path('home') }}\">PlayMap</a>
-\t\t\t</h1>
+\t\t<div
+\t\t\tclass=\"container\">
 
-\t\t\t{# {% if is_granted('ROLE_USER') %} #}
-\t\t\t{% if app.user %}
+\t\t\t<!--COUPE + BTN CHALLENGE-->
 
-\t\t\t\t<span class=\"mx-3\">Bonjour
-\t\t\t\t\t{{ app.user.pseudo }}</span>
-\t\t\t\t<a href=\"{{ path('security_logout') }}\">Se déconnecter</a>
+\t\t\t<div class=\"row p-3 pb-5 justify-content-center text-center\">
 
-\t\t\t{% else %}
+\t\t\t\t<div class=\"col-4 align-self-center\">
+\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t<img class=\"coupechallenges\" src=\"{{ asset('images/iconcoupechallenge.png') }}\">
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"btnChallenge\">
+\t\t\t\t\t\t<a class=\"btn btn-warning text-light d-sm-none d-lg-inline\" href=\"#\">Challenges</a>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
 
-\t\t\t\t<span class=\"mx-3\">Bonjour Inconnu</span>
-\t\t\t\t<a class=\"mx-3\" href=\"{{ path('security_login') }}\">Se connecter</a>
-\t\t\t\t<a class=\"mx-3\" href=\"{{ path('security_registration') }}\">S'inscrire</a>
+\t\t\t\t<!--COUPE + BTN CHALLENGE-->
 
-\t\t\t{% endif %}
+\t\t\t\t<!--LOGO PLAYMAP-->
 
-\t\t</nav>
+\t\t\t\t<div class=\"col-4\">
+\t\t\t\t\t<a href=\"{{ path('home') }}\"><img class=\"logoplaymap\" src=\"{{ asset('images/logoplaymap2.png') }}\"></a>
+\t\t\t\t</div>
+
+\t\t\t\t<!--LOGO PLAYMAP-->
+
+\t\t\t\t<!--NAV BURGER INSCRIPTION CONNEXION-->
+
+\t\t\t\t<div class=\"col-4\">
+\t\t\t\t\t<nav class=\"navbar navbar-expand-lg navbar-dark \">
+\t\t\t\t\t\t<button class=\"navbar-toggler border-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t\t\t\t\t<span class=\"navbar-toggler-icon \"></span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
+\t\t\t\t\t\t\t<div class=\"navbar-nav\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link active text-light btn-nav\" href=\"{{ path('security_registration') }}\">Inscription</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link active text-light btn-nav\" href=\"#\">Connexion</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+
+\t\t\t</div>
+\t\t</div>
+
+\t\t<!--NAV BURGER INSCRIPTION CONNEXION-->
+
+\t\t<!--BARRE DE NAV-->
+
 \t</header>
 
-\t<main>
-\t\t{% block content %}
-\t\t\t{# c'est ici que viendra s'insérer le contenu propre à chaque page #}
-\t\t{% endblock %}
-\t</main>
+
+\t{% block content %}
+\t\t{# c'est ici que viendra s'insérer le contenu propre à chaque page #}
+
+
+\t{% endblock %}
+
 
 \t<footer>
-\t\t<p>&copy; PlayMap-{{ \"now\" | date(\"Y\") }}</p>
-\t</footer>
+
+\t\t<!--FOOTER-->
+
+\t\t<div class=\"container\">
+
+\t\t\t<div class=\"row p-3\">
+
+\t\t\t\t<div class=\"col-3 \">
+\t\t\t\t\t<div class=\"Fcontact\">
+\t\t\t\t\t\t<p>Contact Siège</p>
+\t\t\t\t\t\t<p>6 Rue Chaudron</p><br>
+\t\t\t\t\t\t<p>75010 PARIS</p><br>
+\t\t\t\t\t\t<p>xxx.gmail.com</p>
+\t\t\t\t\t\t<p>Tel : 0123456789</p>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<div class=\"col-6\">
+\t\t\t\t\t<div class=\"row justify-content-center mb-5 mt-3\">
+\t\t\t\t\t\t<div class=\"imgR\">
+
+\t\t\t\t\t\t\t<img src=\"{{ asset('images/InstagramIcon.png') }}\">
+\t\t\t\t\t\t\t<img src=\"{{ asset('images/FacebookIcon.png') }}\">
+\t\t\t\t\t\t\t<img src=\"{{ asset('images/TwitterIcon.png') }}\">
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t\t<div class=\"row\">
+
+\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Mentions légales</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Cookies</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Contactez-nous</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<div class=\"col-3 align-self-center\">
+\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t<label for=\"formGroupExampleInput2\">Suivez notre actualité</label>
+\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput2\" placeholder=\"Adresse mail\">
+\t\t\t\t\t</div>
+\t\t\t\t</form>
+\t\t\t</div>
+
+\t\t</div>
+
+\t</div>
+
+\t<!--FOOTER-->
+
+</footer>
+
 
 {% endblock %}
-", "layout.html.twig", "/Applications/MAMP/htdocs/playmap19/PlayMap/templates/layout.html.twig");
+", "layout.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/layout.html.twig");
     }
 }
