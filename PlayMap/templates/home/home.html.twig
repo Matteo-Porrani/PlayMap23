@@ -60,17 +60,17 @@
 
             <form>
               <div class="form-group">
-                <label for="formGroupExampleInput">Départ</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Adresse de départ">
+                <label for="start">Départ</label>
+                <input type="text" class="form-control" id="start" placeholder="Adresse de départ" name="start">
               </div>
 
               <div class="form-group">
-                <label for="formGroupExampleInput2">Arrivée</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Adresse d'arrivée">
+                <label for="stop">Arrivée</label>
+                <input type="text" class="form-control" id="stop" placeholder="Adresse d'arrivée" name="stop">
               </div>
 
               <div class="row justify-content-center">
-                <button type="button" class="btn btn-warning text-light mb-4">Allons-y !</button>
+                <button type="button" class="btn btn-warning text-light mb-4" id="search" name="search">Allons-y !</button>
               </div>
 
             </form>
@@ -113,7 +113,7 @@
 
 		<!--MAP-->
     <div class="container-fluid">
-			<div class="map">
+			<div id="carte" class="map">
         
       </div>
 		</div>

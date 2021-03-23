@@ -147,17 +147,17 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
             <form>
               <div class=\"form-group\">
-                <label for=\"formGroupExampleInput\">Départ</label>
-                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput\" placeholder=\"Adresse de départ\">
+                <label for=\"start\">Départ</label>
+                <input type=\"text\" class=\"form-control\" id=\"start\" placeholder=\"Adresse de départ\" name=\"start\">
               </div>
 
               <div class=\"form-group\">
-                <label for=\"formGroupExampleInput2\">Arrivée</label>
-                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput2\" placeholder=\"Adresse d'arrivée\">
+                <label for=\"stop\">Arrivée</label>
+                <input type=\"text\" class=\"form-control\" id=\"stop\" placeholder=\"Adresse d'arrivée\" name=\"stop\">
               </div>
 
               <div class=\"row justify-content-center\">
-                <button type=\"button\" class=\"btn btn-warning text-light mb-4\">Allons-y !</button>
+                <button type=\"button\" class=\"btn btn-warning text-light mb-4\" id=\"search\" name=\"search\">Allons-y !</button>
               </div>
 
             </form>
@@ -203,7 +203,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 \t\t<!--MAP-->
     <div class=\"container-fluid\">
-\t\t\t<div class=\"map\">
+\t\t\t<div id=\"carte\" class=\"map\">
         
       </div>
 \t\t</div>
@@ -297,17 +297,17 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
             <form>
               <div class=\"form-group\">
-                <label for=\"formGroupExampleInput\">Départ</label>
-                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput\" placeholder=\"Adresse de départ\">
+                <label for=\"start\">Départ</label>
+                <input type=\"text\" class=\"form-control\" id=\"start\" placeholder=\"Adresse de départ\" name=\"start\">
               </div>
 
               <div class=\"form-group\">
-                <label for=\"formGroupExampleInput2\">Arrivée</label>
-                <input type=\"text\" class=\"form-control\" id=\"formGroupExampleInput2\" placeholder=\"Adresse d'arrivée\">
+                <label for=\"stop\">Arrivée</label>
+                <input type=\"text\" class=\"form-control\" id=\"stop\" placeholder=\"Adresse d'arrivée\" name=\"stop\">
               </div>
 
               <div class=\"row justify-content-center\">
-                <button type=\"button\" class=\"btn btn-warning text-light mb-4\">Allons-y !</button>
+                <button type=\"button\" class=\"btn btn-warning text-light mb-4\" id=\"search\" name=\"search\">Allons-y !</button>
               </div>
 
             </form>
@@ -350,7 +350,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 \t\t<!--MAP-->
     <div class=\"container-fluid\">
-\t\t\t<div class=\"map\">
+\t\t\t<div id=\"carte\" class=\"map\">
         
       </div>
 \t\t</div>

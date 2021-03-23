@@ -9,7 +9,7 @@
 		</title>
 
 		{# Run `composer require symfony/webpack-encore-bundle`
-										           and uncomment the following Encore helpers to start using Symfony UX #}
+														           and uncomment the following Encore helpers to start using Symfony UX #}
 
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
@@ -17,7 +17,15 @@
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 			<link rel="preconnect" href="https://fonts.gstatic.com">
-			<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap" rel="stylesheet">
+			<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap" rel="stylesheet">
+
+
+			{# <!-- Open Street Map : fichiers CSS --> #}
+			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+			<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+			<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"/>
+
 
 			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 			<link rel="stylesheet" href="{{ asset('css/style-home.css') }}">
@@ -27,13 +35,18 @@
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
 
-      
+			<!-- Open Street Map : fichiers JS -->
+			<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+			<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+			<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+			<script src="{{ asset('js/mappe.js') }}"></script>
+
+
 		{% endblock %}
 	</head>
 
 	<body>
-		{% block body %}
-			
-		{% endblock %}
+		{% block body %}{% endblock %}
 	</body>
 </html>

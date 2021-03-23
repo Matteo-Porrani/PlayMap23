@@ -61,19 +61,19 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t";
         // line 14
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 26
+        // line 34
         echo "
 \t\t";
-        // line 27
+        // line 35
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
+        // line 47
         echo "\t</head>
 
 \t<body>
 \t\t";
-        // line 35
+        // line 50
         $this->displayBlock('body', $context, $blocks);
-        // line 38
+        // line 51
         echo "\t</body>
 </html>
 ";
@@ -124,14 +124,23 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
 
 \t\t\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
-\t\t\t<link href=\"https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap\" rel=\"stylesheet\">
+\t\t\t<link
+\t\t\thref=\"https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap\" rel=\"stylesheet\">
+
+
+\t\t\t";
+        // line 25
+        echo "\t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\" integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\" crossorigin=\"\"/>
+\t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css\"/>
+\t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css\"/>
+
 
 \t\t\t<link rel=\"stylesheet\" href=\"";
-        // line 22
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\">
 \t\t\t<link rel=\"stylesheet\" href=\"";
-        // line 23
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-home.css"), "html", null, true);
         echo "\">
 
@@ -144,7 +153,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 27
+    // line 35
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -154,12 +163,22 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 28
+        // line 36
         echo "\t\t\t";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
 
-      
+\t\t\t<!-- Open Street Map : fichiers JS -->
+\t\t\t<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\" integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\" crossorigin=\"\"></script>
+\t\t\t<script src=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js\"></script>
+\t\t\t<script src=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js\"></script>
+
+\t\t\t<script src=\"";
+        // line 43
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mappe.js"), "html", null, true);
+        echo "\"></script>
+
+
 \t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -169,7 +188,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 35
+    // line 50
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -179,9 +198,6 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 36
-        echo "\t\t\t
-\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -197,7 +213,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     public function getDebugInfo()
     {
-        return array (  183 => 36,  173 => 35,  158 => 28,  148 => 27,  135 => 23,  131 => 22,  120 => 15,  110 => 14,  99 => 7,  89 => 6,  77 => 38,  75 => 35,  70 => 32,  68 => 27,  65 => 26,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
+        return array (  192 => 50,  178 => 43,  167 => 36,  157 => 35,  144 => 31,  140 => 30,  133 => 25,  120 => 15,  110 => 14,  99 => 7,  89 => 6,  77 => 51,  75 => 50,  70 => 47,  68 => 35,  65 => 34,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -213,7 +229,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t</title>
 
 \t\t{# Run `composer require symfony/webpack-encore-bundle`
-\t\t\t\t\t\t\t\t\t\t           and uncomment the following Encore helpers to start using Symfony UX #}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t           and uncomment the following Encore helpers to start using Symfony UX #}
 
 \t\t{% block stylesheets %}
 \t\t\t{{ encore_entry_link_tags('app') }}
@@ -221,7 +237,15 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
 
 \t\t\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
-\t\t\t<link href=\"https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap\" rel=\"stylesheet\">
+\t\t\t<link
+\t\t\thref=\"https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap\" rel=\"stylesheet\">
+
+
+\t\t\t{# <!-- Open Street Map : fichiers CSS --> #}
+\t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\" integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\" crossorigin=\"\"/>
+\t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css\"/>
+\t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css\"/>
+
 
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-home.css') }}\">
@@ -231,14 +255,19 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t{% block javascripts %}
 \t\t\t{{ encore_entry_script_tags('app') }}
 
-      
+\t\t\t<!-- Open Street Map : fichiers JS -->
+\t\t\t<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\" integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\" crossorigin=\"\"></script>
+\t\t\t<script src=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js\"></script>
+\t\t\t<script src=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js\"></script>
+
+\t\t\t<script src=\"{{ asset('js/mappe.js') }}\"></script>
+
+
 \t\t{% endblock %}
 \t</head>
 
 \t<body>
-\t\t{% block body %}
-\t\t\t
-\t\t{% endblock %}
+\t\t{% block body %}{% endblock %}
 \t</body>
 </html>
 ", "base.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/base.html.twig");

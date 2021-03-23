@@ -126,10 +126,15 @@ a{
 
 .map{
     height: 800px;
+    border: 1px solid red;
     /* background: lightgrey; */
-    /* width: 100%; */
-    border: 10px solid red;
+  }
+
+
+.leaflet-routing-container.leaflet-bar.leaflet-control {
+  display: none;
 }
+
 
 /*---MAIN---*/
 
@@ -139,10 +144,10 @@ footer{
     background-color: #004B76;
     color: white;
 
-    position: absolute;
+    /* position: absolute;
     bottom:0;
     left: 0;
-    right: 0;
+    right: 0; */
     
 }
 
