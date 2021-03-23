@@ -99,7 +99,10 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
         // line 16
         echo "
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni beatae aut non, quae libero illum voluptate dolores veniam quidem? Itaque nobis delectus expedita tempora et saepe fuga voluptas sunt.</p>
-
+\t\t<img src=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/error-.jpg"), "html", null, true);
+        echo "\" alt=\"\">
 \t\t\t</div>
 \t\t</div>
 \t</div>
@@ -126,7 +129,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
     public function getDebugInfo()
     {
-        return array (  100 => 16,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  104 => 18,  100 => 16,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -148,13 +151,13 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
         <a href=\"{{ path('security_logout') }}\">Déconnexion</a> #}
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni beatae aut non, quae libero illum voluptate dolores veniam quidem? Itaque nobis delectus expedita tempora et saepe fuga voluptas sunt.</p>
-
+\t\t<img src=\"{{asset('images/error-.jpg') }}\" alt=\"\">
 \t\t\t</div>
 \t\t</div>
 \t</div>
 
 
 {% endblock %}
-", "home/home.html.twig", "/Applications/MAMP/htdocs/playmap19/PlayMap/templates/home/home.html.twig");
+", "home/home.html.twig", "/Users/moussaillon/Documents/GitHub/PlayMap23/PlayMap/templates/home/home.html.twig");
     }
 }
