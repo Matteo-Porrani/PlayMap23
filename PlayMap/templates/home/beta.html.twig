@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 
 {% block title %}
@@ -7,14 +7,18 @@
 {% endblock %}
 
 
-{% block body %}
+{% block content %}
 	{{ parent() }}
 
 	<div class="container">
 		<div class="row my-5">
 			<div class="col">
 
-				<h2>Page Home</h2>
+        {% if app.user %}
+          <p class="text-danger">Ce message apparaît si un utilisateur est connecté : user = {{ app.user.pseudo }}</p>
+        {% endif %}
+
+				<h2>Page Beta</h2>
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos magni praesentium nam voluptatem corrupti natus. Maxime debitis quo, quidem, voluptates molestias asperiores et vero delectus dolor distinctio, corporis voluptatem aut.</p>
 			</h2>
 

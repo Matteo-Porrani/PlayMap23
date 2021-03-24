@@ -26,14 +26,14 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'content' => [$this, 'block_content'],
         ];
     }
 
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/beta.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "home/beta.html.twig", 1);
+        $this->parent = $this->loadTemplate("layout.html.twig", "home/beta.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -80,25 +80,36 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
     }
 
     // line 10
-    public function block_body($context, array $blocks = [])
+    public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 11
         echo "\t";
-        $this->displayParentBlock("body", $context, $blocks);
+        $this->displayParentBlock("content", $context, $blocks);
         echo "
 
 \t<div class=\"container\">
 \t\t<div class=\"row my-5\">
 \t\t\t<div class=\"col\">
 
-\t\t\t\t<h2>Page Home</h2>
+        ";
+        // line 17
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17)) {
+            // line 18
+            echo "          <p class=\"text-danger\">Ce message apparaît si un utilisateur est connecté : user = ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18), "pseudo", [], "any", false, false, false, 18), "html", null, true);
+            echo "</p>
+        ";
+        }
+        // line 20
+        echo "
+\t\t\t\t<h2>Page Beta</h2>
 \t\t\t\t<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos magni praesentium nam voluptatem corrupti natus. Maxime debitis quo, quidem, voluptates molestias asperiores et vero delectus dolor distinctio, corporis voluptatem aut.</p>
 \t\t\t</h2>
 
@@ -113,23 +124,23 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
 \t\t\t\t</thead>
 \t\t\t\t<tbody>
 \t\t\t\t\t";
-        // line 31
+        // line 35
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["betas"]) || array_key_exists("betas", $context) ? $context["betas"] : (function () { throw new RuntimeError('Variable "betas" does not exist.', 31, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["betas"]) || array_key_exists("betas", $context) ? $context["betas"] : (function () { throw new RuntimeError('Variable "betas" does not exist.', 35, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["beta"]) {
-            // line 32
+            // line 36
             echo "\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "id", [], "any", false, false, false, 33), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "id", [], "any", false, false, false, 37), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "name", [], "any", false, false, false, 34), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "name", [], "any", false, false, false, 38), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "age", [], "any", false, false, false, 35), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "age", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t";
@@ -137,7 +148,7 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['beta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 42
         echo "
 \t\t\t\t</tbody>
 \t\t\t</table>
@@ -170,12 +181,12 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
 
     public function getDebugInfo()
     {
-        return array (  141 => 38,  132 => 35,  128 => 34,  124 => 33,  121 => 32,  117 => 31,  93 => 11,  83 => 10,  69 => 5,  59 => 4,  36 => 1,);
+        return array (  152 => 42,  143 => 39,  139 => 38,  135 => 37,  132 => 36,  128 => 35,  111 => 20,  105 => 18,  103 => 17,  93 => 11,  83 => 10,  69 => 5,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'layout.html.twig' %}
 
 
 {% block title %}
@@ -184,14 +195,18 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
 {% endblock %}
 
 
-{% block body %}
+{% block content %}
 \t{{ parent() }}
 
 \t<div class=\"container\">
 \t\t<div class=\"row my-5\">
 \t\t\t<div class=\"col\">
 
-\t\t\t\t<h2>Page Home</h2>
+        {% if app.user %}
+          <p class=\"text-danger\">Ce message apparaît si un utilisateur est connecté : user = {{ app.user.pseudo }}</p>
+        {% endif %}
+
+\t\t\t\t<h2>Page Beta</h2>
 \t\t\t\t<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos magni praesentium nam voluptatem corrupti natus. Maxime debitis quo, quidem, voluptates molestias asperiores et vero delectus dolor distinctio, corporis voluptatem aut.</p>
 \t\t\t</h2>
 
@@ -224,6 +239,6 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
     </div>
   </div>
 </div>{% endblock %}
-", "home/beta.html.twig", "/Applications/MAMP/htdocs/playmap19/PlayMap/templates/home/beta.html.twig");
+", "home/beta.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/home/beta.html.twig");
     }
 }

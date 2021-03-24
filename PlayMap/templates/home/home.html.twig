@@ -8,13 +8,77 @@
 
 	<main>
 
+
+				<div id="user-acc" class="d-none" style="opacity: 0;">
+
+					<section class="user-avatar text-center">
+						<img class="w-25" src="{{ asset('images/AvatarProfil.png') }}" alt="">
+					</section>
+
+					<section class="user-pseudo my-2">
+						<div>
+              {% if app.user %}
+							  <p>{{ app.user.pseudo }}</p>
+              {% endif %}
+						</div>
+					</section>
+
+					<section class="user-grade my-3">
+						<p>Winner dans l'âme</p>
+					</section>
+
+					<!-- A*A -- PROGRESSION -->
+					<section class="user-level d-flex justify-content-center align-items-center my-3">
+
+						<div class="user-level-logo">
+							<img src="images/BadgeOr.png" alt="">
+						</div>
+
+						<div class="user-level-prog"></div>
+
+						<div class="user-level-logo">
+							<img src="images/Médaille.png" alt="">
+						</div>
+
+					</section>
+
+					<!-- A*A -- STATS -->
+					<section class="user-stats d-flex justify-content-between">
+
+						<div class="user-stats-icon">
+							<p>ABC</p>
+						</div>
+						<div class="user-stats-icon">
+							<p>ABC</p>
+						</div>
+						<div class="user-stats-icon">
+							<p>ABC</p>
+						</div>
+
+					</section>
+
+					<section class="user-account my-3 text-center">
+            {% if app.user %}
+					  	<a class="btn btn-account" href="{{ path('account', {('id'): app.user.id}) }}">Voir profil</a>
+            {% endif %}
+					</section>
+
+
+				</div>
+
+
+
+
+
+
 		<!--MAIN-->
 
 		<div class="container">
 
-			<div class="row">
+			<div
+				class="row">
 
-				<!--CADRE MES CHALLENGES ****************************************************** -->
+				<!-- RPR -- BLOC DE GAUCHE ****************************************************** -->
 				<div class="col-4 text-center justify-content-center">
 					<div class="cadreChallenge ">
 						<h3>Mes Challenges</h3>
@@ -25,97 +89,123 @@
 					</div>
 				</div>
 
-				<!--CADRE MES CHALLENGES-->
 
-
-
-
-				<!--MOYEN DE TRANSPORTS ****************************************************** -->
+				<!-- RPR -- BLOC DU CENTRE ****************************************************** -->
 				<div class="col-4">
 
 					<div class="row justify-content-center">
 						<img class="ombretrottinette" src="{{ asset('images/ombretrottinette.png') }}">
-					  <p class="selection">Sélectionnez votre moyen de transport :</p>
-				  </div>
+						<p class="selection med-txt">Sélectionnez votre moyen de transport :</p>
+					</div>
 
-				  <div class="row justify-content-center">
+					<div class="row justify-content-center">
 
-            <div class="btnTransport">
-              <button type="button" class="btn text-light">Vélo</button>
-            </div>
-            <div class="btnTransport">
-              <button type="button" class="btn text-light">Trottinette</button>
-            </div>
-            <div class="btnTransport">
-              <button type="button" class="btn text-light">A Pieds</button>
-            </div>
+						<div class="btnTransport">
+							<button type="button" class="btn text-light med-txt">Vélo</button>
+						</div>
+						<div class="btnTransport">
+							<button type="button" class="btn text-light med-txt">Trottinette</button>
+						</div>
+						<div class="btnTransport">
+							<button type="button" class="btn text-light med-txt">A Pieds</button>
+						</div>
 
-            <!-- FIN MOYEN DE TRANSPORTS-->
+						<!-- FIN MOYEN DE TRANSPORTS-->
 
-          </div>
-
-
-            <!--INPUT DEPART ARRIVEE-->
-          <div class="row justify-content-center">
-
-            <form>
-              <div class="form-group">
-                <label for="start">Départ</label>
-                <input type="text" class="form-control" id="start" placeholder="Adresse de départ" name="start">
-              </div>
-
-              <div class="form-group">
-                <label for="stop">Arrivée</label>
-                <input type="text" class="form-control" id="stop" placeholder="Adresse d'arrivée" name="stop">
-              </div>
-
-              <div class="row justify-content-center">
-                <button type="button" class="btn btn-warning text-light mb-4" id="search" name="search">Allons-y !</button>
-              </div>
-
-            </form>
-
-          </div>
-
-        <!--FIN INPUT DEPART ARRIVEE-->
-          
-        <!--METEO-->
-        </div>
+					</div>
 
 
-      <!--METEO ****************************************************** -->
-        <div class="col-4">
-          <div class="meteo">
+					<!--A*A-- FORMULAIRE ITINERAIRE -->
+					<form>
+						<div class="form-group" style="">
+							<label for="start">Départ</label>
+							<input type="text" class="form-control" id="start" placeholder="Adresse de départ" name="start">
+						</div>
 
-            <div class="row">
+						<div class="form-group">
+							<label for="stop">Arrivée</label>
+							<input type="text" class="form-control" id="stop" placeholder="Adresse d'arrivée" name="stop">
+						</div>
 
-              <div class="col-6 p-3 mb-2 text-white">
-                <p>Paris 10°<br>Aujourd'hui 10°/8°</p>
-              </div>
+						<div class="row justify-content-center">
+							<button type="button" class="btn btn-warning text-light mb-4" id="search" name="search">Allons-y !</button>
+						</div>
 
-              <div class="col-6">
-                <div>
-                  <img src="{{ asset('images/MeteoVent.png') }}">
-                </div>
-              </div>
+					</form>
 
-            </div>
 
-          </div>
-          
-        </div>
+					<!--FIN INPUT DEPART ARRIVEE-->
 
-    </div> <!-- fin de row -->
+				</div>
 
-  </div> <!-- fin du container -->
+				<!-- RPR -- BLOC DE DROITE ****************************************************** -->
+				<div
+					class="col-4">
+					<!--METEO ****************************************************** -->
 
-		
+					<div class="meteo">
+						<div
+							class="row">
+							<!-- row météo -->
+
+							<div class="col-6 p-3 mb-2 text-white">
+								<p>Paris 10°<br>Aujourd'hui 10°/8°</p>
+							</div>
+
+							<div class="col-6">
+								<div>
+									<img src="{{ asset('images/MeteoVent.png') }}">
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div
+						class="row">
+						<!-- row trajet -->
+
+						<div class="col p-3 mt-5 mb-3 statsTrajet">
+
+							<div class="statsTrajetHaut">
+								<p>12 km</p>
+								<p>25 min</p>
+							</div>
+							<div class="statsTrajetBas d-flex justify-content-between">
+								<article>
+									<p>2000
+										<br>calories</p>
+								</article>
+								<article>
+									<p>1056
+										<br>co2</p>
+								</article>
+								<article>
+									<img src="{{ asset('images/Trottinette.png') }}" alt="">
+								</article>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div
+						class="row">
+						<!-- row favoris -->
+						<button class="btn btn-warning text-light mx-auto">Enregistrer dans les favoris</button>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- fin du container -->
+
 
 		<!--MAP-->
-    <div class="container-fluid">
-			<div id="carte" class="map">
-        
-      </div>
+		<div class="container-fluid">
+			<div id="carte" class="map"></div>
 		</div>
 
 	</main>

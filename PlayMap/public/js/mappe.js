@@ -1,7 +1,7 @@
 // On s'assure que la page est chargée
 window.onload = function () {
   // On initialise la carte sur les coordonnées GPS de Paris
-  let macarte = L.map('carte').setView([48.852969, 2.349903], 12)
+  let macarte = L.map('carte').setView([48.852969, 2.349903], 13)
 
   // Cette méthode est à insérer juste après avoir initialisé la carte
   // L.Routing.control({

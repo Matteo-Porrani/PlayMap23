@@ -92,13 +92,94 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
         echo "
 \t<main>
 
+
+\t\t\t\t<div id=\"user-acc\" class=\"d-none\" style=\"opacity: 0;\">
+
+\t\t\t\t\t<section class=\"user-avatar text-center\">
+\t\t\t\t\t\t<img class=\"w-25\" src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/AvatarProfil.png"), "html", null, true);
+        echo "\" alt=\"\">
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<section class=\"user-pseudo my-2\">
+\t\t\t\t\t\t<div>
+              ";
+        // line 20
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20)) {
+            // line 21
+            echo "\t\t\t\t\t\t\t  <p>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "pseudo", [], "any", false, false, false, 21), "html", null, true);
+            echo "</p>
+              ";
+        }
+        // line 23
+        echo "\t\t\t\t\t\t</div>
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<section class=\"user-grade my-3\">
+\t\t\t\t\t\t<p>Winner dans l'âme</p>
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<!-- A*A -- PROGRESSION -->
+\t\t\t\t\t<section class=\"user-level d-flex justify-content-center align-items-center my-3\">
+
+\t\t\t\t\t\t<div class=\"user-level-logo\">
+\t\t\t\t\t\t\t<img src=\"images/BadgeOr.png\" alt=\"\">
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"user-level-prog\"></div>
+
+\t\t\t\t\t\t<div class=\"user-level-logo\">
+\t\t\t\t\t\t\t<img src=\"images/Médaille.png\" alt=\"\">
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<!-- A*A -- STATS -->
+\t\t\t\t\t<section class=\"user-stats d-flex justify-content-between\">
+
+\t\t\t\t\t\t<div class=\"user-stats-icon\">
+\t\t\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"user-stats-icon\">
+\t\t\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"user-stats-icon\">
+\t\t\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<section class=\"user-account my-3 text-center\">
+            ";
+        // line 61
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 61, $this->source); })()), "user", [], "any", false, false, false, 61)) {
+            // line 62
+            echo "\t\t\t\t\t  \t<a class=\"btn btn-account\" href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 62, $this->source); })()), "user", [], "any", false, false, false, 62), "id", [], "any", false, false, false, 62)]), "html", null, true);
+            echo "\">Voir profil</a>
+            ";
+        }
+        // line 64
+        echo "\t\t\t\t\t</section>
+
+
+\t\t\t\t</div>
+
+
+
+
+
+
 \t\t<!--MAIN-->
 
 \t\t<div class=\"container\">
 
-\t\t\t<div class=\"row\">
+\t\t\t<div
+\t\t\t\tclass=\"row\">
 
-\t\t\t\t<!--CADRE MES CHALLENGES ****************************************************** -->
+\t\t\t\t<!-- RPR -- BLOC DE GAUCHE ****************************************************** -->
 \t\t\t\t<div class=\"col-4 text-center justify-content-center\">
 \t\t\t\t\t<div class=\"cadreChallenge \">
 \t\t\t\t\t\t<h3>Mes Challenges</h3>
@@ -109,103 +190,132 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 
-\t\t\t\t<!--CADRE MES CHALLENGES-->
 
-
-
-
-\t\t\t\t<!--MOYEN DE TRANSPORTS ****************************************************** -->
+\t\t\t\t<!-- RPR -- BLOC DU CENTRE ****************************************************** -->
 \t\t\t\t<div class=\"col-4\">
 
 \t\t\t\t\t<div class=\"row justify-content-center\">
 \t\t\t\t\t\t<img class=\"ombretrottinette\" src=\"";
-        // line 37
+        // line 97
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/ombretrottinette.png"), "html", null, true);
         echo "\">
-\t\t\t\t\t  <p class=\"selection\">Sélectionnez votre moyen de transport :</p>
-\t\t\t\t  </div>
+\t\t\t\t\t\t<p class=\"selection med-txt\">Sélectionnez votre moyen de transport :</p>
+\t\t\t\t\t</div>
 
-\t\t\t\t  <div class=\"row justify-content-center\">
+\t\t\t\t\t<div class=\"row justify-content-center\">
 
-            <div class=\"btnTransport\">
-              <button type=\"button\" class=\"btn text-light\">Vélo</button>
-            </div>
-            <div class=\"btnTransport\">
-              <button type=\"button\" class=\"btn text-light\">Trottinette</button>
-            </div>
-            <div class=\"btnTransport\">
-              <button type=\"button\" class=\"btn text-light\">A Pieds</button>
-            </div>
+\t\t\t\t\t\t<div class=\"btnTransport\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn text-light med-txt\">Vélo</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"btnTransport\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn text-light med-txt\">Trottinette</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"btnTransport\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn text-light med-txt\">A Pieds</button>
+\t\t\t\t\t\t</div>
 
-            <!-- FIN MOYEN DE TRANSPORTS-->
+\t\t\t\t\t\t<!-- FIN MOYEN DE TRANSPORTS-->
 
-          </div>
-
-
-            <!--INPUT DEPART ARRIVEE-->
-          <div class=\"row justify-content-center\">
-
-            <form>
-              <div class=\"form-group\">
-                <label for=\"start\">Départ</label>
-                <input type=\"text\" class=\"form-control\" id=\"start\" placeholder=\"Adresse de départ\" name=\"start\">
-              </div>
-
-              <div class=\"form-group\">
-                <label for=\"stop\">Arrivée</label>
-                <input type=\"text\" class=\"form-control\" id=\"stop\" placeholder=\"Adresse d'arrivée\" name=\"stop\">
-              </div>
-
-              <div class=\"row justify-content-center\">
-                <button type=\"button\" class=\"btn btn-warning text-light mb-4\" id=\"search\" name=\"search\">Allons-y !</button>
-              </div>
-
-            </form>
-
-          </div>
-
-        <!--FIN INPUT DEPART ARRIVEE-->
-          
-        <!--METEO-->
-        </div>
+\t\t\t\t\t</div>
 
 
-      <!--METEO ****************************************************** -->
-        <div class=\"col-4\">
-          <div class=\"meteo\">
+\t\t\t\t\t<!--A*A-- FORMULAIRE ITINERAIRE -->
+\t\t\t\t\t<form>
+\t\t\t\t\t\t<div class=\"form-group\" style=\"\">
+\t\t\t\t\t\t\t<label for=\"start\">Départ</label>
+\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"start\" placeholder=\"Adresse de départ\" name=\"start\">
+\t\t\t\t\t\t</div>
 
-            <div class=\"row\">
+\t\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t\t<label for=\"stop\">Arrivée</label>
+\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"stop\" placeholder=\"Adresse d'arrivée\" name=\"stop\">
+\t\t\t\t\t\t</div>
 
-              <div class=\"col-6 p-3 mb-2 text-white\">
-                <p>Paris 10°<br>Aujourd'hui 10°/8°</p>
-              </div>
+\t\t\t\t\t\t<div class=\"row justify-content-center\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-warning text-light mb-4\" id=\"search\" name=\"search\">Allons-y !</button>
+\t\t\t\t\t\t</div>
 
-              <div class=\"col-6\">
-                <div>
-                  <img src=\"";
-        // line 98
+\t\t\t\t\t</form>
+
+
+\t\t\t\t\t<!--FIN INPUT DEPART ARRIVEE-->
+
+\t\t\t\t</div>
+
+\t\t\t\t<!-- RPR -- BLOC DE DROITE ****************************************************** -->
+\t\t\t\t<div
+\t\t\t\t\tclass=\"col-4\">
+\t\t\t\t\t<!--METEO ****************************************************** -->
+
+\t\t\t\t\t<div class=\"meteo\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"row\">
+\t\t\t\t\t\t\t<!-- row météo -->
+
+\t\t\t\t\t\t\t<div class=\"col-6 p-3 mb-2 text-white\">
+\t\t\t\t\t\t\t\t<p>Paris 10°<br>Aujourd'hui 10°/8°</p>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t\t<div class=\"col-6\">
+\t\t\t\t\t\t\t\t<div>
+\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 157
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/MeteoVent.png"), "html", null, true);
         echo "\">
-                </div>
-              </div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
 
-            </div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
 
-          </div>
-          
-        </div>
+\t\t\t\t\t<div
+\t\t\t\t\t\tclass=\"row\">
+\t\t\t\t\t\t<!-- row trajet -->
 
-    </div> <!-- fin de row -->
+\t\t\t\t\t\t<div class=\"col p-3 mt-5 mb-3 statsTrajet\">
 
-  </div> <!-- fin du container -->
+\t\t\t\t\t\t\t<div class=\"statsTrajetHaut\">
+\t\t\t\t\t\t\t\t<p>12 km</p>
+\t\t\t\t\t\t\t\t<p>25 min</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"statsTrajetBas d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t<article>
+\t\t\t\t\t\t\t\t\t<p>2000
+\t\t\t\t\t\t\t\t\t\t<br>calories</p>
+\t\t\t\t\t\t\t\t</article>
+\t\t\t\t\t\t\t\t<article>
+\t\t\t\t\t\t\t\t\t<p>1056
+\t\t\t\t\t\t\t\t\t\t<br>co2</p>
+\t\t\t\t\t\t\t\t</article>
+\t\t\t\t\t\t\t\t<article>
+\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 184
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/Trottinette.png"), "html", null, true);
+        echo "\" alt=\"\">
+\t\t\t\t\t\t\t\t</article>
+\t\t\t\t\t\t\t</div>
 
-\t\t
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</div>
+
+\t\t\t\t\t<div
+\t\t\t\t\t\tclass=\"row\">
+\t\t\t\t\t\t<!-- row favoris -->
+\t\t\t\t\t\t<button class=\"btn btn-warning text-light mx-auto\">Enregistrer dans les favoris</button>
+\t\t\t\t\t</div>
+
+\t\t\t\t</div>
+
+\t\t\t</div>
+
+\t\t</div>
+\t\t<!-- fin du container -->
+
 
 \t\t<!--MAP-->
-    <div class=\"container-fluid\">
-\t\t\t<div id=\"carte\" class=\"map\">
-        
-      </div>
+\t\t<div class=\"container-fluid\">
+\t\t\t<div id=\"carte\" class=\"map\"></div>
 \t\t</div>
 
 \t</main>
@@ -230,7 +340,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
     public function getDebugInfo()
     {
-        return array (  187 => 98,  123 => 37,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  293 => 184,  263 => 157,  200 => 97,  165 => 64,  159 => 62,  157 => 61,  117 => 23,  111 => 21,  109 => 20,  101 => 15,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -245,13 +355,77 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 \t<main>
 
+
+\t\t\t\t<div id=\"user-acc\" class=\"d-none\" style=\"opacity: 0;\">
+
+\t\t\t\t\t<section class=\"user-avatar text-center\">
+\t\t\t\t\t\t<img class=\"w-25\" src=\"{{ asset('images/AvatarProfil.png') }}\" alt=\"\">
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<section class=\"user-pseudo my-2\">
+\t\t\t\t\t\t<div>
+              {% if app.user %}
+\t\t\t\t\t\t\t  <p>{{ app.user.pseudo }}</p>
+              {% endif %}
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<section class=\"user-grade my-3\">
+\t\t\t\t\t\t<p>Winner dans l'âme</p>
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<!-- A*A -- PROGRESSION -->
+\t\t\t\t\t<section class=\"user-level d-flex justify-content-center align-items-center my-3\">
+
+\t\t\t\t\t\t<div class=\"user-level-logo\">
+\t\t\t\t\t\t\t<img src=\"images/BadgeOr.png\" alt=\"\">
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"user-level-prog\"></div>
+
+\t\t\t\t\t\t<div class=\"user-level-logo\">
+\t\t\t\t\t\t\t<img src=\"images/Médaille.png\" alt=\"\">
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<!-- A*A -- STATS -->
+\t\t\t\t\t<section class=\"user-stats d-flex justify-content-between\">
+
+\t\t\t\t\t\t<div class=\"user-stats-icon\">
+\t\t\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"user-stats-icon\">
+\t\t\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"user-stats-icon\">
+\t\t\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</section>
+
+\t\t\t\t\t<section class=\"user-account my-3 text-center\">
+            {% if app.user %}
+\t\t\t\t\t  \t<a class=\"btn btn-account\" href=\"{{ path('account', {('id'): app.user.id}) }}\">Voir profil</a>
+            {% endif %}
+\t\t\t\t\t</section>
+
+
+\t\t\t\t</div>
+
+
+
+
+
+
 \t\t<!--MAIN-->
 
 \t\t<div class=\"container\">
 
-\t\t\t<div class=\"row\">
+\t\t\t<div
+\t\t\t\tclass=\"row\">
 
-\t\t\t\t<!--CADRE MES CHALLENGES ****************************************************** -->
+\t\t\t\t<!-- RPR -- BLOC DE GAUCHE ****************************************************** -->
 \t\t\t\t<div class=\"col-4 text-center justify-content-center\">
 \t\t\t\t\t<div class=\"cadreChallenge \">
 \t\t\t\t\t\t<h3>Mes Challenges</h3>
@@ -262,97 +436,123 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 
-\t\t\t\t<!--CADRE MES CHALLENGES-->
 
-
-
-
-\t\t\t\t<!--MOYEN DE TRANSPORTS ****************************************************** -->
+\t\t\t\t<!-- RPR -- BLOC DU CENTRE ****************************************************** -->
 \t\t\t\t<div class=\"col-4\">
 
 \t\t\t\t\t<div class=\"row justify-content-center\">
 \t\t\t\t\t\t<img class=\"ombretrottinette\" src=\"{{ asset('images/ombretrottinette.png') }}\">
-\t\t\t\t\t  <p class=\"selection\">Sélectionnez votre moyen de transport :</p>
-\t\t\t\t  </div>
+\t\t\t\t\t\t<p class=\"selection med-txt\">Sélectionnez votre moyen de transport :</p>
+\t\t\t\t\t</div>
 
-\t\t\t\t  <div class=\"row justify-content-center\">
+\t\t\t\t\t<div class=\"row justify-content-center\">
 
-            <div class=\"btnTransport\">
-              <button type=\"button\" class=\"btn text-light\">Vélo</button>
-            </div>
-            <div class=\"btnTransport\">
-              <button type=\"button\" class=\"btn text-light\">Trottinette</button>
-            </div>
-            <div class=\"btnTransport\">
-              <button type=\"button\" class=\"btn text-light\">A Pieds</button>
-            </div>
+\t\t\t\t\t\t<div class=\"btnTransport\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn text-light med-txt\">Vélo</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"btnTransport\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn text-light med-txt\">Trottinette</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"btnTransport\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn text-light med-txt\">A Pieds</button>
+\t\t\t\t\t\t</div>
 
-            <!-- FIN MOYEN DE TRANSPORTS-->
+\t\t\t\t\t\t<!-- FIN MOYEN DE TRANSPORTS-->
 
-          </div>
-
-
-            <!--INPUT DEPART ARRIVEE-->
-          <div class=\"row justify-content-center\">
-
-            <form>
-              <div class=\"form-group\">
-                <label for=\"start\">Départ</label>
-                <input type=\"text\" class=\"form-control\" id=\"start\" placeholder=\"Adresse de départ\" name=\"start\">
-              </div>
-
-              <div class=\"form-group\">
-                <label for=\"stop\">Arrivée</label>
-                <input type=\"text\" class=\"form-control\" id=\"stop\" placeholder=\"Adresse d'arrivée\" name=\"stop\">
-              </div>
-
-              <div class=\"row justify-content-center\">
-                <button type=\"button\" class=\"btn btn-warning text-light mb-4\" id=\"search\" name=\"search\">Allons-y !</button>
-              </div>
-
-            </form>
-
-          </div>
-
-        <!--FIN INPUT DEPART ARRIVEE-->
-          
-        <!--METEO-->
-        </div>
+\t\t\t\t\t</div>
 
 
-      <!--METEO ****************************************************** -->
-        <div class=\"col-4\">
-          <div class=\"meteo\">
+\t\t\t\t\t<!--A*A-- FORMULAIRE ITINERAIRE -->
+\t\t\t\t\t<form>
+\t\t\t\t\t\t<div class=\"form-group\" style=\"\">
+\t\t\t\t\t\t\t<label for=\"start\">Départ</label>
+\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"start\" placeholder=\"Adresse de départ\" name=\"start\">
+\t\t\t\t\t\t</div>
 
-            <div class=\"row\">
+\t\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t\t<label for=\"stop\">Arrivée</label>
+\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"stop\" placeholder=\"Adresse d'arrivée\" name=\"stop\">
+\t\t\t\t\t\t</div>
 
-              <div class=\"col-6 p-3 mb-2 text-white\">
-                <p>Paris 10°<br>Aujourd'hui 10°/8°</p>
-              </div>
+\t\t\t\t\t\t<div class=\"row justify-content-center\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-warning text-light mb-4\" id=\"search\" name=\"search\">Allons-y !</button>
+\t\t\t\t\t\t</div>
 
-              <div class=\"col-6\">
-                <div>
-                  <img src=\"{{ asset('images/MeteoVent.png') }}\">
-                </div>
-              </div>
+\t\t\t\t\t</form>
 
-            </div>
 
-          </div>
-          
-        </div>
+\t\t\t\t\t<!--FIN INPUT DEPART ARRIVEE-->
 
-    </div> <!-- fin de row -->
+\t\t\t\t</div>
 
-  </div> <!-- fin du container -->
+\t\t\t\t<!-- RPR -- BLOC DE DROITE ****************************************************** -->
+\t\t\t\t<div
+\t\t\t\t\tclass=\"col-4\">
+\t\t\t\t\t<!--METEO ****************************************************** -->
 
-\t\t
+\t\t\t\t\t<div class=\"meteo\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"row\">
+\t\t\t\t\t\t\t<!-- row météo -->
+
+\t\t\t\t\t\t\t<div class=\"col-6 p-3 mb-2 text-white\">
+\t\t\t\t\t\t\t\t<p>Paris 10°<br>Aujourd'hui 10°/8°</p>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t\t<div class=\"col-6\">
+\t\t\t\t\t\t\t\t<div>
+\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/MeteoVent.png') }}\">
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t\t<div
+\t\t\t\t\t\tclass=\"row\">
+\t\t\t\t\t\t<!-- row trajet -->
+
+\t\t\t\t\t\t<div class=\"col p-3 mt-5 mb-3 statsTrajet\">
+
+\t\t\t\t\t\t\t<div class=\"statsTrajetHaut\">
+\t\t\t\t\t\t\t\t<p>12 km</p>
+\t\t\t\t\t\t\t\t<p>25 min</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"statsTrajetBas d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t<article>
+\t\t\t\t\t\t\t\t\t<p>2000
+\t\t\t\t\t\t\t\t\t\t<br>calories</p>
+\t\t\t\t\t\t\t\t</article>
+\t\t\t\t\t\t\t\t<article>
+\t\t\t\t\t\t\t\t\t<p>1056
+\t\t\t\t\t\t\t\t\t\t<br>co2</p>
+\t\t\t\t\t\t\t\t</article>
+\t\t\t\t\t\t\t\t<article>
+\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/Trottinette.png') }}\" alt=\"\">
+\t\t\t\t\t\t\t\t</article>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</div>
+
+\t\t\t\t\t<div
+\t\t\t\t\t\tclass=\"row\">
+\t\t\t\t\t\t<!-- row favoris -->
+\t\t\t\t\t\t<button class=\"btn btn-warning text-light mx-auto\">Enregistrer dans les favoris</button>
+\t\t\t\t\t</div>
+
+\t\t\t\t</div>
+
+\t\t\t</div>
+
+\t\t</div>
+\t\t<!-- fin du container -->
+
 
 \t\t<!--MAP-->
-    <div class=\"container-fluid\">
-\t\t\t<div id=\"carte\" class=\"map\">
-        
-      </div>
+\t\t<div class=\"container-fluid\">
+\t\t\t<div id=\"carte\" class=\"map\"></div>
 \t\t</div>
 
 \t</main>

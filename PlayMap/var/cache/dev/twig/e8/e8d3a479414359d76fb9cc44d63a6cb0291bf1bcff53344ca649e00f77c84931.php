@@ -105,52 +105,45 @@ class __TwigTemplate_501f50b7cad26a7d34d2f0abd20f66c724fc7ceb78f18ba34da0ee37a91
         }
         // line 15
         echo "
-\t\t";
-        // line 16
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16)) {
-            // line 17
-            echo "\t\t\t<div class=\"mb-3\">
-\t\t\t\tYou are logged in as
-\t\t\t\t";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "username", [], "any", false, false, false, 19), "html", null, true);
-            echo ",
-\t\t\t\t<a href=\"";
-            // line 20
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
-\t\t\t</div>
-\t\t";
-        }
-        // line 23
-        echo "
+  ";
+        // line 25
+        echo "  
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t<h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-\t\t\t\t\t<label for=\"inputEmail\">Email</label>
-\t\t\t\t\t<input type=\"email\" value=\"";
-        // line 29
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 29, $this->source); })()), "html", null, true);
+\t\t\t\t<div class=\"col-8 mx-auto p-5\" style=\"color:white; background: #002B43; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); border-radius: 15px;\">
+\t\t\t\t\t<h1 class=\"h3 mb-3 font-weight-normal text-center\">Connectez-vous à votre compte</h1>
+
+\t\t\t\t\t<div class=\"my-3\">
+\t\t\t\t\t  <label for=\"inputEmail\">Mail</label>
+  \t\t\t\t\t<input type=\"email\" value=\"";
+        // line 33
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 33, $this->source); })()), "html", null, true);
         echo "\" name=\"_username\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-\t\t\t\t\t<label for=\"inputPassword\">Password</label>
-\t\t\t\t\t<input type=\"password\" name=\"_password\" id=\"inputPassword\" class=\"form-control\" required>
+            <small><a>Mot de passe oublié ?</a></small>
+\t\t\t\t\t</div>
+
+
+\t\t\t\t\t<div class=\"my-3\">
+\t\t\t\t\t  <label for=\"inputPassword\">Mot de passe</label>
+  \t\t\t\t\t<input type=\"password\" name=\"_password\" id=\"inputPassword\" class=\"form-control\" required>
+\t\t\t\t\t</div>
 
 \t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 33
+        // line 43
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
-\t\t\t\t\t<button class=\"btn btn-lg btn-primary my-5\" type=\"submit\">
-\t\t\t\t\t\tSign in
-\t\t\t\t\t</button>
+\t\t\t\t\t<div class=\"text-center\">
+            <button class=\"btn btn-warning text-light my-5\" type=\"submit\">Se connecter</button>
+          </div>
+
 \t\t\t\t</form>
 \t\t\t</div>
 \t\t</div>
 \t</div>
 
 \t";
-        // line 53
+        // line 64
         echo "
 
 ";
@@ -174,7 +167,7 @@ class __TwigTemplate_501f50b7cad26a7d34d2f0abd20f66c724fc7ceb78f18ba34da0ee37a91
 
     public function getDebugInfo()
     {
-        return array (  154 => 53,  141 => 33,  134 => 29,  126 => 23,  120 => 20,  116 => 19,  112 => 17,  110 => 16,  107 => 15,  101 => 13,  99 => 12,  96 => 11,  86 => 10,  72 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  147 => 64,  133 => 43,  120 => 33,  110 => 25,  107 => 15,  101 => 13,  99 => 12,  96 => 11,  86 => 10,  72 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -194,28 +187,39 @@ class __TwigTemplate_501f50b7cad26a7d34d2f0abd20f66c724fc7ceb78f18ba34da0ee37a91
 \t\t\t<div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 \t\t{% endif %}
 
+  {#
 \t\t{% if app.user %}
 \t\t\t<div class=\"mb-3\">
 \t\t\t\tYou are logged in as
 \t\t\t\t{{ app.user.username }},
-\t\t\t\t<a href=\"{{ path('app_logout') }}\">Logout</a>
+\t\t\t\t<a href=\"{{ path('security_logout') }}\">Logout</a>
 \t\t\t</div>
 \t\t{% endif %}
-
+  #}
+  
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t<h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-\t\t\t\t\t<label for=\"inputEmail\">Email</label>
-\t\t\t\t\t<input type=\"email\" value=\"{{ last_username }}\" name=\"_username\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-\t\t\t\t\t<label for=\"inputPassword\">Password</label>
-\t\t\t\t\t<input type=\"password\" name=\"_password\" id=\"inputPassword\" class=\"form-control\" required>
+\t\t\t\t<div class=\"col-8 mx-auto p-5\" style=\"color:white; background: #002B43; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); border-radius: 15px;\">
+\t\t\t\t\t<h1 class=\"h3 mb-3 font-weight-normal text-center\">Connectez-vous à votre compte</h1>
+
+\t\t\t\t\t<div class=\"my-3\">
+\t\t\t\t\t  <label for=\"inputEmail\">Mail</label>
+  \t\t\t\t\t<input type=\"email\" value=\"{{ last_username }}\" name=\"_username\" id=\"inputEmail\" class=\"form-control\" required autofocus>
+            <small><a>Mot de passe oublié ?</a></small>
+\t\t\t\t\t</div>
+
+
+\t\t\t\t\t<div class=\"my-3\">
+\t\t\t\t\t  <label for=\"inputPassword\">Mot de passe</label>
+  \t\t\t\t\t<input type=\"password\" name=\"_password\" id=\"inputPassword\" class=\"form-control\" required>
+\t\t\t\t\t</div>
 
 \t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
 
-\t\t\t\t\t<button class=\"btn btn-lg btn-primary my-5\" type=\"submit\">
-\t\t\t\t\t\tSign in
-\t\t\t\t\t</button>
+\t\t\t\t\t<div class=\"text-center\">
+            <button class=\"btn btn-warning text-light my-5\" type=\"submit\">Se connecter</button>
+          </div>
+
 \t\t\t\t</form>
 \t\t\t</div>
 \t\t</div>
@@ -234,6 +238,6 @@ class __TwigTemplate_501f50b7cad26a7d34d2f0abd20f66c724fc7ceb78f18ba34da0ee37a91
 
 
 {% endblock %}
-", "security/login.html.twig", "/Applications/MAMP/htdocs/playmap19/PlayMap/templates/security/login.html.twig");
+", "security/login.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/security/login.html.twig");
     }
 }
