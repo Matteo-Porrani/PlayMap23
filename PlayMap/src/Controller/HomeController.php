@@ -37,6 +37,16 @@ class HomeController extends AbstractController
   }
 
 
+  public function inscription(): Response
+  {
+    // return $this->render('home/index.html.twig', [
+    //     'controller_name' => 'HomeController',
+    // ]);
+
+    return $this->render('inscription/inscription.html.twig');
+  }
+
+
   // fonction de récupération données API
   public function getDatabase()
   {

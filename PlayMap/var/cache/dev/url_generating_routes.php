@@ -24,4 +24,5 @@ return [
     'security_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     'account' => [['id'], ['_controller' => 'App\\Controller\\AccountController::account'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/account']], [], []],
     'backoffice' => [[], ['_controller' => 'App\\Controller\\BackController::back'], [], [['text', '/admin/back']], [], []],
+    'inscription' => [[], ['_controller' => 'App\\Controller\\HomeController::inscription'], [], [['text', '/inscription']], [], []],
 ];

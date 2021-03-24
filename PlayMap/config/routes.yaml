@@ -33,3 +33,8 @@ account:
 backoffice:
     path: /admin/back
     controller: App\Controller\BackController::back
+
+# inscription
+inscription:
+    path: /inscription
+    controller: App\Controller\HomeController::inscription

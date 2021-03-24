@@ -140,7 +140,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
         } else {
             // line 57
             echo "                  <a class=\"nav-link active text-light btn-nav\" href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_registration");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
             echo "\" style=\"font-size: .8rem;\">Inscription</a>
                   <a class=\"nav-link active text-light btn-nav\" href=\"";
             // line 58
@@ -351,7 +351,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
                   
                 {% else %}
-                  <a class=\"nav-link active text-light btn-nav\" href=\"{{ path('security_registration') }}\" style=\"font-size: .8rem;\">Inscription</a>
+                  <a class=\"nav-link active text-light btn-nav\" href=\"{{ path('inscription') }}\" style=\"font-size: .8rem;\">Inscription</a>
                   <a class=\"nav-link active text-light btn-nav\" href=\"{{ path('security_login') }}\" style=\"font-size: .8rem;\">Connexion</a>
 
                 {% endif %}
