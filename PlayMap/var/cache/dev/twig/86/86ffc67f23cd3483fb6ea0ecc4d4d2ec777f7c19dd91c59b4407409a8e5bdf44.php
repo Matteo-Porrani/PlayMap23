@@ -178,6 +178,6 @@ class __TwigTemplate_0be778bb14e406637fec2090101e07ce3790ac8ab3693bae973c1dd7603
     </div>
   </div>
 
-{% endblock %}", "security/registration.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/security/registration.html.twig");
+{% endblock %}", "security/registration.html.twig", "/Users/moussaillon/Documents/GitHub/PlayMap23/PlayMap/templates/security/registration.html.twig");
     }
 }

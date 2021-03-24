@@ -357,6 +357,6 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 \t</main>
 {% endblock %}
-", "home/home.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/home/home.html.twig");
+", "home/home.html.twig", "/Users/moussaillon/Documents/GitHub/PlayMap23/PlayMap/templates/home/home.html.twig");
     }
 }

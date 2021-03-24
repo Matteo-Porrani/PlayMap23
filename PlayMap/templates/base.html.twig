@@ -29,8 +29,17 @@
 
 			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 			<link rel="stylesheet" href="{{ asset('css/style-home.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/style-inscription.css') }}">
 
 		{% endblock %}
+
+		
+	</head>
+
+	<body>
+		{% block body %}
+		{% endblock %}
+
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
@@ -41,12 +50,9 @@
 			<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 			<script src="{{ asset('js/mappe.js') }}"></script>
+			<script src="{{ asset('js/inscription.js') }}"></script>
 
 
 		{% endblock %}
-	</head>
-
-	<body>
-		{% block body %}{% endblock %}
 	</body>
 </html>

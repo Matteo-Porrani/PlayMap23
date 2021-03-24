@@ -29,8 +29,8 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
-            'javascripts' => [$this, 'block_javascripts'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -61,19 +61,22 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t";
         // line 14
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 34
-        echo "
-\t\t";
         // line 35
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 47
-        echo "\t</head>
+        echo "
+\t\t
+\t</head>
 
 \t<body>
 \t\t";
-        // line 50
+        // line 40
         $this->displayBlock('body', $context, $blocks);
-        // line 51
+        // line 42
+        echo "
+
+\t\t";
+        // line 44
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 57
         echo "\t</body>
 </html>
 ";
@@ -143,6 +146,10 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-home.css"), "html", null, true);
         echo "\">
+\t\t\t<link rel=\"stylesheet\" href=\"";
+        // line 32
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-inscription.css"), "html", null, true);
+        echo "\">
 
 \t\t";
         
@@ -153,42 +160,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 35
-    public function block_javascripts($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        // line 36
-        echo "\t\t\t";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
-        echo "
-
-\t\t\t<!-- Open Street Map : fichiers JS -->
-\t\t\t<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\" integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\" crossorigin=\"\"></script>
-\t\t\t<script src=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js\"></script>
-\t\t\t<script src=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js\"></script>
-
-\t\t\t<script src=\"";
-        // line 43
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mappe.js"), "html", null, true);
-        echo "\"></script>
-
-
-\t\t";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 50
+    // line 40
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,6 +170,44 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 41
+        echo "\t\t";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 44
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 45
+        echo "\t\t\t";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
+        echo "
+
+\t\t\t<!-- Open Street Map : fichiers JS -->
+\t\t\t<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\" integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\" crossorigin=\"\"></script>
+\t\t\t<script src=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js\"></script>
+\t\t\t<script src=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js\"></script>
+
+\t\t\t";
+        // line 53
+        echo "\t\t\t<script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/inscription.js"), "html", null, true);
+        echo "\"></script>
+
+
+\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -213,7 +223,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     public function getDebugInfo()
     {
-        return array (  192 => 50,  178 => 43,  167 => 36,  157 => 35,  144 => 31,  140 => 30,  133 => 25,  120 => 15,  110 => 14,  99 => 7,  89 => 6,  77 => 51,  75 => 50,  70 => 47,  68 => 35,  65 => 34,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
+        return array (  205 => 53,  194 => 45,  184 => 44,  174 => 41,  164 => 40,  151 => 32,  147 => 31,  143 => 30,  136 => 25,  123 => 15,  113 => 14,  102 => 7,  92 => 6,  80 => 57,  78 => 44,  74 => 42,  72 => 40,  65 => 35,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -249,8 +259,17 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-home.css') }}\">
+\t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-inscription.css') }}\">
 
 \t\t{% endblock %}
+
+\t\t
+\t</head>
+
+\t<body>
+\t\t{% block body %}
+\t\t{% endblock %}
+
 
 \t\t{% block javascripts %}
 \t\t\t{{ encore_entry_script_tags('app') }}
@@ -260,16 +279,13 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<script src=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js\"></script>
 \t\t\t<script src=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js\"></script>
 
-\t\t\t<script src=\"{{ asset('js/mappe.js') }}\"></script>
+\t\t\t{# <script src=\"{{ asset('js/mappe.js') }}\"></script> #}
+\t\t\t<script src=\"{{ asset('js/inscription.js') }}\"></script>
 
 
 \t\t{% endblock %}
-\t</head>
-
-\t<body>
-\t\t{% block body %}{% endblock %}
 \t</body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/base.html.twig");
+", "base.html.twig", "/Users/moussaillon/Documents/GitHub/PlayMap23/PlayMap/templates/base.html.twig");
     }
 }
