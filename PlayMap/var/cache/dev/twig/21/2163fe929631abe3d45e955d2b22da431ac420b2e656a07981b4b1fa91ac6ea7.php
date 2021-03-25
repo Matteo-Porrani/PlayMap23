@@ -61,22 +61,22 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t";
         // line 14
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 36
+        // line 37
         echo "
 \t\t
 \t</head>
 
 \t<body>
 \t\t";
-        // line 41
+        // line 42
         $this->displayBlock('body', $context, $blocks);
-        // line 44
+        // line 45
         echo "
 
 \t\t";
-        // line 46
+        // line 47
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 59
+        // line 60
         echo "    
 \t</body>
 </html>
@@ -155,6 +155,10 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         // line 33
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-inscription.css"), "html", null, true);
         echo "\">
+\t\t\t<link rel=\"stylesheet\" href=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-account.css"), "html", null, true);
+        echo "\">
 
 \t\t";
         
@@ -165,7 +169,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 41
+    // line 42
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -175,7 +179,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 42
+        // line 43
         echo "\t\t
     ";
         
@@ -186,7 +190,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 46
+    // line 47
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -196,7 +200,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 47
+        // line 48
         echo "\t\t\t";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
@@ -207,16 +211,16 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<script src=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js\"></script>
 
 \t\t\t<script src=\"";
-        // line 54
+        // line 55
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mappe.js"), "html", null, true);
         echo "\"></script>
 \t\t\t<script src=\"";
-        // line 55
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/inscription.js"), "html", null, true);
         echo "\"></script>
 
       <script src=\"";
-        // line 57
+        // line 58
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/userMod.js"), "html", null, true);
         echo "\"></script>
 \t\t";
@@ -235,7 +239,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     public function getDebugInfo()
     {
-        return array (  220 => 57,  215 => 55,  211 => 54,  200 => 47,  190 => 46,  179 => 42,  169 => 41,  156 => 33,  152 => 32,  148 => 31,  144 => 30,  137 => 25,  124 => 15,  114 => 14,  103 => 7,  93 => 6,  80 => 59,  78 => 46,  74 => 44,  72 => 41,  65 => 36,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
+        return array (  224 => 58,  219 => 56,  215 => 55,  204 => 48,  194 => 47,  183 => 43,  173 => 42,  160 => 34,  156 => 33,  152 => 32,  148 => 31,  144 => 30,  137 => 25,  124 => 15,  114 => 14,  103 => 7,  93 => 6,  80 => 60,  78 => 47,  74 => 45,  72 => 42,  65 => 37,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -273,6 +277,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-home.css') }}\">
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-userMod.css') }}\">
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-inscription.css') }}\">
+\t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-account.css') }}\">
 
 \t\t{% endblock %}
 

@@ -1,0 +1,110 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+  {{ parent() }} - Page Profil
+{% endblock %}
+
+
+
+{% block content %}
+  <main>
+
+    <!--PROFIL-->
+    <div class="container">
+
+      <div class="row">
+
+        <div id="card-profil" class="col text-center">
+          <p>
+            <strong> Modifier le profil 
+              <a href="#"><img src="./image/crayonmodifier.png" class="ml-2" /></a>
+            </strong>
+          </p>
+
+          <img src="{{ asset('images/AvatarProfil.png') }}">
+          <h3 class="pseudotitre">PSEUDO<img class="badgeor1" src="{{ asset('images/BadgeOr.png') }}"></h3>
+          <h4>-Grand Débutant-</h4>
+        </div>
+
+      </div> <!-- end of row -->
+
+
+
+      <!-- RPR -- Barre de progres entière -->
+      <div class="row">
+        <div id="progressBarre" class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+          <img class="badgeor2" src="{{ asset('images/BadgeOr.png') }}">
+          <div class="bluebox progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+          <img class="medaille" src="{{ asset('images/Médaille.png') }}">
+        </div>
+      </div>
+
+      <!-- RPR -- STATISTIQUES -->
+      <div class="row m-4 justify-content-center border border-danger">
+
+        <div id="statMens" class="d-block stat statM bg-info">
+          <p>Mes Statistiques Mensuelles</p>
+          <div class="statContainer d-flex">
+            <div class="statellipse">abc</div>
+            <div class="statellipse">abc</div>
+            <div class="statellipse">abc</div>
+          </div>
+        </div>
+
+        <div id="statGlob" class="d-block stat statM bg-warning">
+          <p>Mes Statistiques Globales</p>
+          <div class="statellipse">abc</div>
+          <div class="statellipse">abc</div>
+          <div class="statellipse">abc</div>
+        </div>
+
+      </div>
+
+    </div> <!-- end of container -->
+
+
+
+    <!-- T*T -- TRAJETS & CHALLENGES -->
+
+    <!--Trajet Fav & Challenge en cours-->
+    <div class="container">
+
+      <div id="secondbgn" class="row">
+
+        <div class="trajetfav col-4 text-center">
+          <h4>Trajet Favoris</h4>
+          <div id="favoris" class="list-group favoris">
+            <!--
+            <p class="list-group-item text-dark">5 rue chaudron, 75010 Paris <img class="star d-block" src="https://img.icons8.com/fluent/48/000000/star.png"/></p>-->
+            <p class="text-center text-dark ">(Aucun trajet favori pour le moment...)
+              <!--<img class="star d-block" src="https://img.icons8.com/fluent/48/000000/star.png"/>-->
+            </p>
+            <!--
+            <p class="list-group-item text-dark">5 rue chaudron, 75010 Paris <img class="star d-block" src="https://img.icons8.com/fluent/48/000000/star.png"/></p>-->
+          </div>
+
+          <div>
+            <a href="#" id="button1" type="button" class="btn btn-warning text-white">Allons-y !</a>
+          </div>
+        
+        </div>
+
+        <div class="challengeCard col-4 text-center justify-content-center">
+          <h4 class="chalEnCours">Challenges en cours</h4>
+          <div id="challengeMessage">
+            <p class="text-center">Pas de challenge en cours...</p>
+          </div>
+
+        </div>
+      
+      </div>
+
+    </div>
+
+  </main>
+
+
+{% endblock %}

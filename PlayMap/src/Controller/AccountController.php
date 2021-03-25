@@ -22,7 +22,7 @@ class AccountController extends AbstractController
       $grade = "Winner dans l'âme";
     }
 
-    return $this->render('account/account.html.twig', [
+    return $this->render('account/accountDef.html.twig', [
       "user" => $user,
       "grade" => $grade
     ]);
