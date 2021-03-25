@@ -37,4 +37,4 @@ backoffice:
 # inscription
 inscription:
     path: /inscription
-    controller: App\Controller\HomeController::inscription
+    controller: App\Controller\SecurityController::inscription

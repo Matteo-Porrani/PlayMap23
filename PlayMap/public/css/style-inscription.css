@@ -1,11 +1,16 @@
-body {
-    background-image: url(../images/fond_num_4_1-1.png);
-    background-size: 2880px 1046px;
-    background-repeat: no-repeat;
-    background-position: top;
-    /* background-position: center; */
-    font-family: 'Rubik', sans-serif !important;
-}
+/* body {
+  background: skyblue;
+} */
+
+/* #fondCouleur {
+  position: absolute;
+  z-index: -3000;
+  background-color: #004B76;
+  width: 100vw;
+  height: 300vh;
+} */
+
+
 
 /*----------------------------------------------
 ------------------- HEADER ------------------------
@@ -81,10 +86,10 @@ header,main{
     text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
 }
 
-#sectRegister1, #sectRegister2{
+/* #sectRegister1, #sectRegister2{
     margin: auto;
     width: 50%;
-}
+} */
 
 #main #borderPage{
     border-radius: 20px;
@@ -96,7 +101,7 @@ header,main{
     background: #FFC700;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    padding: 10px 0;
+
     color: white;
 }
 

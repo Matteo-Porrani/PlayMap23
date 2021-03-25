@@ -86,6 +86,11 @@ class User implements UserInterface
      */
     private $stat;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $birthday;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -256,6 +261,22 @@ class User implements UserInterface
         return $this->grade;
     }
 
+    // RPR ** niveau de l'utilisateur
+    public function getGradeLabel(): ?string
+    {
+        $tab = ['Débutant déjà pro', 'Challengeur', 'Presque intouchable', 'Winner dans l\'âme', 'Grand Pro', 'Étoile née', 'Big Boss'];
+        $niveau = $tab[$this->grade];
+        return $niveau;
+    }
+
+    // RPR ** niveau de la progression
+    public function getGradeProg(): ?string
+    {
+        $tab = ['15%', '28%', '39%', '47%', '65%', '81%', '100%'];
+        $niveau = $tab[$this->grade];
+        return $niveau;
+    }
+
     public function setGrade(int $grade): self
     {
         $this->grade = $grade;
@@ -288,6 +309,18 @@ class User implements UserInterface
         }
 
         $this->stat = $stat;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?string
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(?string $birthday): self
+    {
+        $this->birthday = $birthday;
 
         return $this;
     }

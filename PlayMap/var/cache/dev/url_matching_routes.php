@@ -21,7 +21,7 @@ return [
         '/login' => [[['_route' => 'security_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'security_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/admin/back' => [[['_route' => 'backoffice', '_controller' => 'App\\Controller\\BackController::back'], null, null, null, false, false, null]],
-        '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\HomeController::inscription'], null, null, null, false, false, null]],
+        '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\SecurityController::inscription'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

@@ -2,16 +2,18 @@
 
 namespace App\Controller;
 
+use App\Entity\Stat;
 use App\Entity\User;
+
 use App\Form\RegistrationType;
-
+use App\Form\RegistrationType2;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class SecurityController extends AbstractController
 {
@@ -25,7 +27,7 @@ class SecurityController extends AbstractController
 
 
 
-
+    // RPR -- inscription 1
     public function registration(Request $request, UserPasswordEncoderInterface $encoder)
     {
       $user = new User();
@@ -50,6 +52,47 @@ class SecurityController extends AbstractController
       }
 
       return $this->render('security/registration.html.twig', [
+        'form' => $form->createView()
+      ]);
+    }
+
+    // T*T -- inscription 2
+    public function inscription(Request $request, UserPasswordEncoderInterface $encoder)
+    {
+      $user = new User();
+      $form = $this->createForm(RegistrationType2::class, $user);
+
+      $form->handleRequest($request);
+
+      if ($form->isSubmitted() && $form->isValid()) {
+
+        $hash = $encoder->encodePassword($user, $user->getPassword());
+        $user->setPassword($hash);
+
+        // $user->setRoles(["ROLE_ADMIN", "ROLE_EXTRA"]);
+
+        $user->setLastname("empty");
+        $user->setFirstname("empty");
+        $user->setGrade(0);
+        $user->setLevel(0);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->flush();
+
+          // création de stat
+          $stat = new Stat();
+          $stat->setTotalDistance(0);
+          $stat->setMonthlyDistance(0);
+          $stat->setUser($user);
+
+        $em->persist($stat);
+        $em->flush();
+
+        return $this->redirectToRoute('home');
+      }
+
+      return $this->render('inscription/inscription.html.twig', [
         'form' => $form->createView()
       ]);
     }

@@ -10,6 +10,7 @@
   <main>
 
     <!--PROFIL-->
+    <!-- T*T -- DEBUT CONTAINER -->
     <div class="container">
 
       <div class="row">
@@ -17,13 +18,24 @@
         <div id="card-profil" class="col text-center">
           <p>
             <strong> Modifier le profil 
-              <a href="#"><img src="./image/crayonmodifier.png" class="ml-2" /></a>
+              <a href="#"><img src="{{ asset('images/crayonmodifier.png') }}" class="ml-2" /></a>
             </strong>
           </p>
 
-          <img src="{{ asset('images/AvatarProfil.png') }}">
-          <h3 class="pseudotitre">PSEUDO<img class="badgeor1" src="{{ asset('images/BadgeOr.png') }}"></h3>
-          <h4>-Grand Débutant-</h4>
+          <img class="my-3" src="{{ asset('images/AvatarProfil.png') }}">
+          
+          <h3 class="pseudotitre">
+            {% if app.user %}
+              {{ app.user.pseudo }}
+            {% endif %}
+            <img class="badgeor1" src="{{ asset('images/BadgeOr.png') }}">
+          </h3>
+          
+          <h4>
+            {% if app.user %}
+              — {{ app.user.gradeLabel }} —
+            {% endif %}
+          </h4>
         </div>
 
       </div> <!-- end of row -->
@@ -35,7 +47,8 @@
         <div id="progressBarre" class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
           <img class="badgeor2" src="{{ asset('images/BadgeOr.png') }}">
           <div class="bluebox progress">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <!-- barre dynamique -->
+            <div class="progress-bar bg-warning" role="progressbar" style="width: {% if app.user %}{{ app.user.gradeProg }}{% endif %}" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
             </div>
           </div>
           <img class="medaille" src="{{ asset('images/Médaille.png') }}">
@@ -43,66 +56,113 @@
       </div>
 
       <!-- RPR -- STATISTIQUES -->
-      <div class="row m-4 justify-content-center border border-danger">
+      <div class="row my-4 justify-content-center">
 
-        <div id="statMens" class="d-block stat statM bg-info">
+        <div id="statMens" class="d-block stat statM">
           <p>Mes Statistiques Mensuelles</p>
-          <div class="statContainer d-flex">
-            <div class="statellipse">abc</div>
-            <div class="statellipse">abc</div>
-            <div class="statellipse">abc</div>
+          <div class="statContainer d-flex justify-content-between">
+            <div class="statellipse d-flex justify-content-center align-items-center">
+              {% if app.user %}
+                {{ app.user.stat.monthlyDistance }} <br>
+                km
+              {% endif %}
+            </div>
+            <div class="statellipse d-flex justify-content-center align-items-center">???</div>
+            <div class="statellipse d-flex justify-content-center align-items-center">???</div>
           </div>
         </div>
 
-        <div id="statGlob" class="d-block stat statM bg-warning">
+        <div id="statGlob" class="d-block stat statM">
           <p>Mes Statistiques Globales</p>
-          <div class="statellipse">abc</div>
-          <div class="statellipse">abc</div>
-          <div class="statellipse">abc</div>
+          <div class="statContainer d-flex justify-content-between">
+            <div class="statellipse d-flex justify-content-center align-items-center">
+              {% if app.user %}
+                {{ app.user.stat.totalDistance }} <br>
+                km
+              {% endif %}
+            </div>
+            <div class="statellipse d-flex justify-content-center align-items-center">???</div>
+            <div class="statellipse d-flex justify-content-center align-items-center">???</div>
+          </div>
         </div>
 
-      </div>
-
-    </div> <!-- end of container -->
-
-
-
-    <!-- T*T -- TRAJETS & CHALLENGES -->
-
-    <!--Trajet Fav & Challenge en cours-->
-    <div class="container">
-
-      <div id="secondbgn" class="row">
-
-        <div class="trajetfav col-4 text-center">
-          <h4>Trajet Favoris</h4>
-          <div id="favoris" class="list-group favoris">
-            <!--
-            <p class="list-group-item text-dark">5 rue chaudron, 75010 Paris <img class="star d-block" src="https://img.icons8.com/fluent/48/000000/star.png"/></p>-->
-            <p class="text-center text-dark ">(Aucun trajet favori pour le moment...)
-              <!--<img class="star d-block" src="https://img.icons8.com/fluent/48/000000/star.png"/>-->
-            </p>
-            <!--
-            <p class="list-group-item text-dark">5 rue chaudron, 75010 Paris <img class="star d-block" src="https://img.icons8.com/fluent/48/000000/star.png"/></p>-->
-          </div>
-
-          <div>
-            <a href="#" id="button1" type="button" class="btn btn-warning text-white">Allons-y !</a>
-          </div>
-        
-        </div>
-
-        <div class="challengeCard col-4 text-center justify-content-center">
-          <h4 class="chalEnCours">Challenges en cours</h4>
-          <div id="challengeMessage">
-            <p class="text-center">Pas de challenge en cours...</p>
-          </div>
-
-        </div>
-      
       </div>
 
     </div>
+
+
+
+
+    <!-- RPR -- TRAJETS & CHALLENGES -->
+
+      <section id="fav-et-chall">
+        <!--Trajet Fav & Challenge en cours-->
+  
+        <div class="container">
+          <div id="secondbgn" class="row">
+    
+            <div class="trajetfav col-5 text-center">
+              <h4>Trajets Favoris</h4>
+              <div id="favoris" class="favoris">
+                {# <p class="text-center text-dark ">(Aucun trajet favori pour le moment...)</p> #}
+
+                <div class="simpleTrajet d-flex">
+                  <p>6 rue Chaudron 75010 Paris <br> 99 boulevard de la République, 75011 Paris</p>
+                  <img src="{{ asset('images/Star_1.png') }}" alt="">
+                </div>
+
+                <div class="simpleTrajet d-flex">
+                  <p>6 rue Chaudron 75010 Paris <br> 99 boulevard de la République, 75011 Paris</p>
+                  <img src="{{ asset('images/Star_1.png') }}" alt="">
+                </div>
+
+                <div class="simpleTrajet d-flex">
+                  <p>6 rue Chaudron 75010 Paris <br> 99 boulevard de la République, 75011 Paris</p>
+                  <img src="{{ asset('images/Star_1.png') }}" alt="">
+                </div>
+
+                <div class="simpleTrajet d-flex">
+                  <p>6 rue Chaudron 75010 Paris <br> 99 boulevard de la République, 75011 Paris</p>
+                  <img src="{{ asset('images/Star_1.png') }}" alt="">
+                </div>
+
+                
+
+              </div>
+    
+              <div class="text-center my-3">
+                <a href="#" id="button1" type="button" class="btn btn-warning text-white">Allons-y !</a>
+              </div>
+
+            
+            </div>
+    
+            <div class="challengeCard col-4 text-center justify-content-center">
+              <h4 class="chalEnCours">Challenges en cours</h4>
+              <div id="challengeMessage">
+                <p class="text-center">Pas de challenge en cours...</p>
+              </div>
+    
+            </div>
+          
+          </div>
+        </div>
+      </section>
+
+
+
+  <script>
+    tfavs = document.querySelectorAll('.simpleTrajet');
+
+    for (tfav of tfavs) {
+      tfav.addEventListener('click', function (e) {
+        e.currentTarget.style.background = 'gainsboro';
+      });
+
+    }
+  
+  </script>
+  
 
   </main>
 
