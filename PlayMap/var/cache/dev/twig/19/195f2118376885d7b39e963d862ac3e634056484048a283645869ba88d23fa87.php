@@ -443,6 +443,6 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
 
 {% endblock %}
-", "layout.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/layout.html.twig");
+", "layout.html.twig", "/Applications/MAMP/htdocs/gitSymfony/PlayMap23/PlayMap/templates/layout.html.twig");
     }
 }

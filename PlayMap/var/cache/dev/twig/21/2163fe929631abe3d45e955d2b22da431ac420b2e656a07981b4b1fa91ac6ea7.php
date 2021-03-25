@@ -61,22 +61,22 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t";
         // line 14
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 37
+        // line 39
         echo "
 \t\t
 \t</head>
 
 \t<body>
 \t\t";
-        // line 42
+        // line 44
         $this->displayBlock('body', $context, $blocks);
-        // line 45
+        // line 47
         echo "
 
 \t\t";
-        // line 47
+        // line 49
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 60
+        // line 63
         echo "    
 \t</body>
 </html>
@@ -128,35 +128,37 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
 
 \t\t\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
-\t\t\t<link
-\t\t\thref=\"https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap\" rel=\"stylesheet\">
-
+\t\t\t
+\t        <style>
+            \t@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+\t\t\t\t@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+        \t</style>
 
 \t\t\t";
-        // line 25
+        // line 27
         echo "\t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\" integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\" crossorigin=\"\"/>
 \t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css\"/>
 \t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css\"/>
 
 
 \t\t\t<link rel=\"stylesheet\" href=\"";
-        // line 30
+        // line 32
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\">
 \t\t\t<link rel=\"stylesheet\" href=\"";
-        // line 31
+        // line 33
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-home.css"), "html", null, true);
         echo "\">
 \t\t\t<link rel=\"stylesheet\" href=\"";
-        // line 32
+        // line 34
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-userMod.css"), "html", null, true);
         echo "\">
 \t\t\t<link rel=\"stylesheet\" href=\"";
-        // line 33
+        // line 35
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-inscription.css"), "html", null, true);
         echo "\">
 \t\t\t<link rel=\"stylesheet\" href=\"";
-        // line 34
+        // line 36
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-account.css"), "html", null, true);
         echo "\">
 
@@ -169,7 +171,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 42
+    // line 44
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -179,7 +181,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 43
+        // line 45
         echo "\t\t
     ";
         
@@ -190,7 +192,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     }
 
-    // line 47
+    // line 49
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -200,7 +202,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 48
+        // line 50
         echo "\t\t\t";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
@@ -211,16 +213,20 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<script src=\"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js\"></script>
 
 \t\t\t<script src=\"";
-        // line 55
+        // line 57
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mappe.js"), "html", null, true);
         echo "\"></script>
 \t\t\t<script src=\"";
-        // line 56
+        // line 58
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/inscription.js"), "html", null, true);
+        echo "\"></script>
+\t\t\t<script src=\"";
+        // line 59
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/meteo.js"), "html", null, true);
         echo "\"></script>
 
       <script src=\"";
-        // line 58
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/userMod.js"), "html", null, true);
         echo "\"></script>
 \t\t";
@@ -239,7 +245,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     public function getDebugInfo()
     {
-        return array (  224 => 58,  219 => 56,  215 => 55,  204 => 48,  194 => 47,  183 => 43,  173 => 42,  160 => 34,  156 => 33,  152 => 32,  148 => 31,  144 => 30,  137 => 25,  124 => 15,  114 => 14,  103 => 7,  93 => 6,  80 => 60,  78 => 47,  74 => 45,  72 => 42,  65 => 37,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
+        return array (  230 => 61,  225 => 59,  221 => 58,  217 => 57,  206 => 50,  196 => 49,  185 => 45,  175 => 44,  162 => 36,  158 => 35,  154 => 34,  150 => 33,  146 => 32,  139 => 27,  124 => 15,  114 => 14,  103 => 7,  93 => 6,  80 => 63,  78 => 49,  74 => 47,  72 => 44,  65 => 39,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -263,9 +269,11 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
 
 \t\t\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
-\t\t\t<link
-\t\t\thref=\"https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap\" rel=\"stylesheet\">
-
+\t\t\t
+\t        <style>
+            \t@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+\t\t\t\t@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+        \t</style>
 
 \t\t\t{# <!-- Open Street Map : fichiers CSS --> #}
 \t\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\" integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\" crossorigin=\"\"/>
@@ -300,12 +308,13 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
 \t\t\t<script src=\"{{ asset('js/mappe.js') }}\"></script>
 \t\t\t<script src=\"{{ asset('js/inscription.js') }}\"></script>
+\t\t\t<script src=\"{{ asset('js/meteo.js') }}\"></script>
 
       <script src=\"{{ asset('js/userMod.js') }}\"></script>
 \t\t{% endblock %}
     
 \t</body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/gitSymfony/PlayMap23/PlayMap/templates/base.html.twig");
     }
 }

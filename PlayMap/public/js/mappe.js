@@ -30,7 +30,7 @@ window.onload = function () {
   // On charge les tuiles depuis un serveur au choix, ici OpenStreetMap France
   L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
     attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-    minZoom: 1,
+    minZoom: 13,
     maxZoom: 20
   }).addTo(macarte)
 
@@ -50,6 +50,7 @@ window.onload = function () {
 
 
   search.addEventListener('click', function (e) {
+    console.log('recherche itinéraire');
     e.preventDefault();
     window.fetch("https://nominatim.openstreetmap.org/search?q=" + start.value + "&format=geocodejson")
       .then((res) => {
