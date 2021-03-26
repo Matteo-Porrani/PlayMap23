@@ -10,8 +10,9 @@
 
 
 body{
-    background-image: url(../images/fond_num_4_1-1.png);
-    background-size: 2880px 846px;
+    background-image: url(../images/fond_num_5.jpg);
+    /* background-size: 2880px 2889px; */
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: top;
     /* height: 600px; */

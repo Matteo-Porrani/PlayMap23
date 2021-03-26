@@ -76,7 +76,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t";
         // line 49
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 63
+        // line 64
         echo "    
 \t</body>
 </html>
@@ -157,9 +157,6 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         // line 35
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-inscription.css"), "html", null, true);
         echo "\">
-\t\t\t";
-        // line 35
-        echo "
 \t\t\t<link rel=\"stylesheet\" href=\"";
         // line 36
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style-account.css"), "html", null, true);
@@ -232,6 +229,10 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
         // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/userMod.js"), "html", null, true);
         echo "\"></script>
+      <script src=\"";
+        // line 62
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/selectVehicule.js"), "html", null, true);
+        echo "\"></script>
 \t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -248,7 +249,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 
     public function getDebugInfo()
     {
-        return array (  222 => 58,  217 => 56,  213 => 55,  202 => 48,  192 => 47,  181 => 43,  171 => 42,  160 => 35,  156 => 33,  152 => 32,  148 => 31,  144 => 30,  137 => 25,  124 => 15,  114 => 14,  103 => 7,  93 => 6,  80 => 60,  78 => 47,  74 => 45,  72 => 42,  65 => 37,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
+        return array (  234 => 62,  230 => 61,  225 => 59,  221 => 58,  217 => 57,  206 => 50,  196 => 49,  185 => 45,  175 => 44,  162 => 36,  158 => 35,  154 => 34,  150 => 33,  146 => 32,  139 => 27,  124 => 15,  114 => 14,  103 => 7,  93 => 6,  80 => 64,  78 => 49,  74 => 47,  72 => 44,  65 => 39,  63 => 14,  60 => 13,  56 => 9,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -288,7 +289,7 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-home.css') }}\">
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-userMod.css') }}\">
 \t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-inscription.css') }}\">
-\t\t\t{# <link rel=\"stylesheet\" href=\"{{ asset('css/style-account.css') }}\"> #}
+\t\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/style-account.css') }}\">
 
 \t\t{% endblock %}
 
@@ -314,10 +315,11 @@ class __TwigTemplate_fd7bf44b5ee3949d91956eb27accc3cc7e8c938e12f65313b30da2d5f1a
 \t\t\t<script src=\"{{ asset('js/meteo.js') }}\"></script>
 
       <script src=\"{{ asset('js/userMod.js') }}\"></script>
+      <script src=\"{{ asset('js/selectVehicule.js') }}\"></script>
 \t\t{% endblock %}
     
 \t</body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/gitSymfony/PlayMap23/PlayMap/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/base.html.twig");
     }
 }

@@ -12,7 +12,7 @@
 		<div id="user-acc" class="d-none" style="opacity: 0;">
 
 			<section class="user-avatar text-center">
-				<img class="w-25" src="{{ asset('images/AvatarProfil.png') }}" alt="">
+				<img class="w-25" src="{{ asset('images/old-man.png') }}" alt="">
 			</section>
 
 			<section class="user-pseudo my-2">
@@ -24,7 +24,11 @@
 			</section>
 
 			<section class="user-grade my-3">
-				<p>Winner dans l'âme</p>
+				<p>
+          {% if app.user %}
+						— {{ app.user.gradeLabel }} —
+					{% endif %}
+        </p>
 			</section>
 
 			<!-- A*A -- PROGRESSION -->
@@ -34,7 +38,10 @@
 					<img src="images/BadgeOr.png" alt="">
 				</div>
 
-				<div class="user-level-prog"></div>
+				<div class="user-level-prog">
+          <div></div>
+          <div class="user-level-prog-int bg-warning"></div>
+        </div>
 
 				<div class="user-level-logo">
 					<img src="images/Médaille.png" alt="">
@@ -46,13 +53,13 @@
 			<section class="user-stats d-flex justify-content-between">
 
 				<div class="user-stats-icon">
-					<p>ABC</p>
+					<p>85<br>km</p>
 				</div>
 				<div class="user-stats-icon">
-					<p>ABC</p>
+					<p>2000<br>calories</p>
 				</div>
 				<div class="user-stats-icon">
-					<p>ABC</p>
+					<p>250 g<br>Co2/km</p>
 				</div>
 
 			</section>

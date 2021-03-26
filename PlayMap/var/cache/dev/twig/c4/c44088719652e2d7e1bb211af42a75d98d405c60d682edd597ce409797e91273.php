@@ -109,9 +109,11 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
         }
         // line 20
         echo "
-\t\t\t\t<h2>Page Beta</h2>
+\t\t\t\t<h2>Page de test</h2>
 \t\t\t\t<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos magni praesentium nam voluptatem corrupti natus. Maxime debitis quo, quidem, voluptates molestias asperiores et vero delectus dolor distinctio, corporis voluptatem aut.</p>
 \t\t\t</h2>
+      <div id=\"react-root\" class=\"my-3\"></div>
+
 
 \t\t\t<table class=\"table\">
 \t\t\t\t<thead class=\"thead-dark\">
@@ -124,23 +126,23 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
 \t\t\t\t</thead>
 \t\t\t\t<tbody>
 \t\t\t\t\t";
-        // line 35
+        // line 37
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["betas"]) || array_key_exists("betas", $context) ? $context["betas"] : (function () { throw new RuntimeError('Variable "betas" does not exist.', 35, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["betas"]) || array_key_exists("betas", $context) ? $context["betas"] : (function () { throw new RuntimeError('Variable "betas" does not exist.', 37, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["beta"]) {
-            // line 36
+            // line 38
             echo "\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "id", [], "any", false, false, false, 37), "html", null, true);
-            echo "</td>
-\t\t\t\t\t\t\t<td>";
-            // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "name", [], "any", false, false, false, 38), "html", null, true);
-            echo "</td>
-\t\t\t\t\t\t\t<td>";
             // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "age", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "id", [], "any", false, false, false, 39), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t\t<td>";
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "name", [], "any", false, false, false, 40), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t\t<td>";
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["beta"], "age", [], "any", false, false, false, 41), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t";
@@ -148,7 +150,7 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['beta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 44
         echo "
 \t\t\t\t</tbody>
 \t\t\t</table>
@@ -181,7 +183,7 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
 
     public function getDebugInfo()
     {
-        return array (  152 => 42,  143 => 39,  139 => 38,  135 => 37,  132 => 36,  128 => 35,  111 => 20,  105 => 18,  103 => 17,  93 => 11,  83 => 10,  69 => 5,  59 => 4,  36 => 1,);
+        return array (  154 => 44,  145 => 41,  141 => 40,  137 => 39,  134 => 38,  130 => 37,  111 => 20,  105 => 18,  103 => 17,  93 => 11,  83 => 10,  69 => 5,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -206,9 +208,11 @@ class __TwigTemplate_a7469f2475007b38046645570535d58d628e02ff983775c8b3259eccd35
           <p class=\"text-danger\">Ce message apparaît si un utilisateur est connecté : user = {{ app.user.pseudo }}</p>
         {% endif %}
 
-\t\t\t\t<h2>Page Beta</h2>
+\t\t\t\t<h2>Page de test</h2>
 \t\t\t\t<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos magni praesentium nam voluptatem corrupti natus. Maxime debitis quo, quidem, voluptates molestias asperiores et vero delectus dolor distinctio, corporis voluptatem aut.</p>
 \t\t\t</h2>
+      <div id=\"react-root\" class=\"my-3\"></div>
+
 
 \t\t\t<table class=\"table\">
 \t\t\t\t<thead class=\"thead-dark\">

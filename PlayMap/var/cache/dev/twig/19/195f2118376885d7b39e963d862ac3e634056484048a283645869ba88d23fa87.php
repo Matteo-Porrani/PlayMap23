@@ -126,7 +126,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
                     <a id=\"btnModal\" class=\"nav-link active text-light btn-nav\" href=\"\" style=\"font-size: .8rem;\">Mon Compte</a>
                     <img id=\"btnModalAvat\" src=\"";
             // line 50
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/AvatarProfil.png"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/old-man.png"), "html", null, true);
             echo "\" alt=\"\" style=\"width: 38px; height: 38px; margin-left: -20px;\">
                   </div>
 
@@ -186,7 +186,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 \t\t\t\t\t\t<p>Contact Siège</p>
 \t\t\t\t\t\t<p>6 Rue Chaudron</p><br>
 \t\t\t\t\t\t<p>75010 PARIS</p><br>
-\t\t\t\t\t\t<p>xxx.gmail.com</p>
+\t\t\t\t\t\t<p>playmap@gmail.com</p>
 \t\t\t\t\t\t<p>Tel : 0123456789</p>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -213,15 +213,19 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
 \t\t\t\t\t<div class=\"row\">
 
-\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
 \t\t\t\t\t\t\t<p>Mentions légales</p>
 \t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Blog</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
 \t\t\t\t\t\t\t<p>Cookies</p>
 \t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
 \t\t\t\t\t\t\t<p>Contactez-nous</p>
 \t\t\t\t\t\t</div>
 
@@ -290,7 +294,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
     public function getDebugInfo()
     {
-        return array (  270 => 80,  268 => 79,  258 => 78,  208 => 109,  204 => 108,  200 => 107,  174 => 83,  172 => 78,  153 => 61,  147 => 58,  142 => 57,  135 => 53,  129 => 50,  124 => 47,  122 => 46,  118 => 44,  100 => 30,  85 => 18,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  274 => 80,  272 => 79,  262 => 78,  208 => 109,  204 => 108,  200 => 107,  174 => 83,  172 => 78,  153 => 61,  147 => 58,  142 => 57,  135 => 53,  129 => 50,  124 => 47,  122 => 46,  118 => 44,  100 => 30,  85 => 18,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -344,7 +348,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
                   <div class=\"d-flex align-items-center\">
                     <a id=\"btnModal\" class=\"nav-link active text-light btn-nav\" href=\"\" style=\"font-size: .8rem;\">Mon Compte</a>
-                    <img id=\"btnModalAvat\" src=\"{{ asset('images/AvatarProfil.png') }}\" alt=\"\" style=\"width: 38px; height: 38px; margin-left: -20px;\">
+                    <img id=\"btnModalAvat\" src=\"{{ asset('images/old-man.png') }}\" alt=\"\" style=\"width: 38px; height: 38px; margin-left: -20px;\">
                   </div>
 
                   <a class=\"nav-link active text-light btn-nav\" href=\"{{ path('security_logout') }}\" style=\"font-size: .8rem;\">Deconnexion</a>
@@ -392,7 +396,7 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 \t\t\t\t\t\t<p>Contact Siège</p>
 \t\t\t\t\t\t<p>6 Rue Chaudron</p><br>
 \t\t\t\t\t\t<p>75010 PARIS</p><br>
-\t\t\t\t\t\t<p>xxx.gmail.com</p>
+\t\t\t\t\t\t<p>playmap@gmail.com</p>
 \t\t\t\t\t\t<p>Tel : 0123456789</p>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -410,15 +414,19 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
 \t\t\t\t\t<div class=\"row\">
 
-\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
 \t\t\t\t\t\t\t<p>Mentions légales</p>
 \t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
+\t\t\t\t\t\t\t<p>Blog</p>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
 \t\t\t\t\t\t\t<p>Cookies</p>
 \t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t<div class=\"col-4 text-center mt-4\">
+\t\t\t\t\t\t<div class=\"col-3 text-center mt-4\">
 \t\t\t\t\t\t\t<p>Contactez-nous</p>
 \t\t\t\t\t\t</div>
 
@@ -443,6 +451,6 @@ class __TwigTemplate_d0b6e174757ed38decccf302b46a465918df695b061dba78d34adb5e95e
 
 
 {% endblock %}
-", "layout.html.twig", "/Applications/MAMP/htdocs/gitSymfony/PlayMap23/PlayMap/templates/layout.html.twig");
+", "layout.html.twig", "/Applications/MAMP/htdocs/playmap22/PlayMap/templates/layout.html.twig");
     }
 }

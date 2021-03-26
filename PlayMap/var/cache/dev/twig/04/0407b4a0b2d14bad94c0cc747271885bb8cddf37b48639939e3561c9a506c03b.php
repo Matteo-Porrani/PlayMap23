@@ -98,7 +98,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t<section class=\"user-avatar text-center\">
 \t\t\t\t<img class=\"w-25\" src=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/AvatarProfil.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/old-man.png"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t</section>
 
@@ -118,7 +118,18 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t</section>
 
 \t\t\t<section class=\"user-grade my-3\">
-\t\t\t\t<p>Winner dans l'âme</p>
+\t\t\t\t<p>
+          ";
+        // line 28
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28)) {
+            // line 29
+            echo "\t\t\t\t\t\t— ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29), "gradeLabel", [], "any", false, false, false, 29), "html", null, true);
+            echo " —
+\t\t\t\t\t";
+        }
+        // line 31
+        echo "        </p>
 \t\t\t</section>
 
 \t\t\t<!-- A*A -- PROGRESSION -->
@@ -128,7 +139,10 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t\t\t<img src=\"images/BadgeOr.png\" alt=\"\">
 \t\t\t\t</div>
 
-\t\t\t\t<div class=\"user-level-prog\"></div>
+\t\t\t\t<div class=\"user-level-prog\">
+          <div></div>
+          <div class=\"user-level-prog-int bg-warning\"></div>
+        </div>
 
 \t\t\t\t<div class=\"user-level-logo\">
 \t\t\t\t\t<img src=\"images/Médaille.png\" alt=\"\">
@@ -140,28 +154,28 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t<section class=\"user-stats d-flex justify-content-between\">
 
 \t\t\t\t<div class=\"user-stats-icon\">
-\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t<p>85<br>km</p>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"user-stats-icon\">
-\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t<p>2000<br>calories</p>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"user-stats-icon\">
-\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t<p>250 g<br>Co2/km</p>
 \t\t\t\t</div>
 
 \t\t\t</section>
 
 \t\t\t<section class=\"user-account my-3 text-center\">
 \t\t\t\t";
-        // line 61
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 61, $this->source); })()), "user", [], "any", false, false, false, 61)) {
-            // line 62
+        // line 68
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 68, $this->source); })()), "user", [], "any", false, false, false, 68)) {
+            // line 69
             echo "\t\t\t\t\t<a class=\"btn btn-account\" href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 62, $this->source); })()), "user", [], "any", false, false, false, 62), "id", [], "any", false, false, false, 62)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 69, $this->source); })()), "user", [], "any", false, false, false, 69), "id", [], "any", false, false, false, 69)]), "html", null, true);
             echo "\">Voir profil</a>
 \t\t\t\t";
         }
-        // line 64
+        // line 71
         echo "\t\t\t</section>
 
 
@@ -193,15 +207,15 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 \t\t\t\t\t<div class=\"row justify-content-center ombreTransport\">
 \t\t\t\t\t\t<img class=\"ombreVelo\" src=\"";
-        // line 94
+        // line 101
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/Ombre+Vélo.png"), "html", null, true);
         echo "\">
 \t\t\t\t\t\t<img class=\"ombretrottinette d-none\" src=\"";
-        // line 95
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/ombretrottinette.png"), "html", null, true);
         echo "\">
 \t\t\t\t\t\t<img class=\"ombrePied d-none\" src=\"";
-        // line 96
+        // line 103
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/Icon_Apied.png"), "html", null, true);
         echo "\">
 \t\t\t\t\t\t<p class=\"selection med-txt\">Sélectionnez votre moyen de transport :</p>
@@ -233,7 +247,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 \t\t\t\t\t\t<div class=\"Vector\">
 \t\t\t\t\t\t\t<img class=\"float-right\" src=\"";
-        // line 125
+        // line 132
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/vector.png"), "html", null, true);
         echo "\" alt=\"VECTOR\">
 \t\t\t\t\t\t</div>
@@ -298,7 +312,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t\t\t\t\t\t</article>
 \t\t\t\t\t\t\t\t<article>
 \t\t\t\t\t\t\t\t\t<img id=\"transport\" src=\"";
-        // line 187
+        // line 194
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/Vélo.png"), "html", null, true);
         echo "\" alt=\"transport mobilité\">
 \t\t\t\t\t\t\t\t</article>
@@ -336,7 +350,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
 \t\t\t\t<section class=\"badge\">
 \t\t\t\t\t<img src=\"";
-        // line 222
+        // line 229
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/badge.png"), "html", null, true);
         echo "\" alt=\"BADGE\">
 \t\t\t\t\t<h4 class=\"font-weight-bold\">Bien Joué !
@@ -388,7 +402,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 
     public function getDebugInfo()
     {
-        return array (  340 => 222,  302 => 187,  237 => 125,  205 => 96,  201 => 95,  197 => 94,  165 => 64,  159 => 62,  157 => 61,  117 => 23,  111 => 21,  109 => 20,  101 => 15,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  354 => 229,  316 => 194,  251 => 132,  219 => 103,  215 => 102,  211 => 101,  179 => 71,  173 => 69,  171 => 68,  132 => 31,  126 => 29,  124 => 28,  117 => 23,  111 => 21,  109 => 20,  101 => 15,  92 => 8,  82 => 7,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -407,7 +421,7 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t<div id=\"user-acc\" class=\"d-none\" style=\"opacity: 0;\">
 
 \t\t\t<section class=\"user-avatar text-center\">
-\t\t\t\t<img class=\"w-25\" src=\"{{ asset('images/AvatarProfil.png') }}\" alt=\"\">
+\t\t\t\t<img class=\"w-25\" src=\"{{ asset('images/old-man.png') }}\" alt=\"\">
 \t\t\t</section>
 
 \t\t\t<section class=\"user-pseudo my-2\">
@@ -419,7 +433,11 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t</section>
 
 \t\t\t<section class=\"user-grade my-3\">
-\t\t\t\t<p>Winner dans l'âme</p>
+\t\t\t\t<p>
+          {% if app.user %}
+\t\t\t\t\t\t— {{ app.user.gradeLabel }} —
+\t\t\t\t\t{% endif %}
+        </p>
 \t\t\t</section>
 
 \t\t\t<!-- A*A -- PROGRESSION -->
@@ -429,7 +447,10 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t\t\t<img src=\"images/BadgeOr.png\" alt=\"\">
 \t\t\t\t</div>
 
-\t\t\t\t<div class=\"user-level-prog\"></div>
+\t\t\t\t<div class=\"user-level-prog\">
+          <div></div>
+          <div class=\"user-level-prog-int bg-warning\"></div>
+        </div>
 
 \t\t\t\t<div class=\"user-level-logo\">
 \t\t\t\t\t<img src=\"images/Médaille.png\" alt=\"\">
@@ -441,13 +462,13 @@ class __TwigTemplate_7cb2b6c01d06b53389a32ee28a785245a233e9089afed27ff5fda96269a
 \t\t\t<section class=\"user-stats d-flex justify-content-between\">
 
 \t\t\t\t<div class=\"user-stats-icon\">
-\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t<p>85<br>km</p>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"user-stats-icon\">
-\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t<p>2000<br>calories</p>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"user-stats-icon\">
-\t\t\t\t\t<p>ABC</p>
+\t\t\t\t\t<p>250 g<br>Co2/km</p>
 \t\t\t\t</div>
 
 \t\t\t</section>
